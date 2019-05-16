@@ -1,0 +1,141 @@
+﻿body {
+    margin:0px;
+    padding:0px;
+
+  //    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.main-wrapper{
+          //    background-color:blanchedalmond;
+               height:auto;
+               width:100%;
+               
+}
+
+
+
+.row.header{
+         background-color:#fff;
+         height:140px;
+         margin-top:0px;
+         position:fixed;
+         
+}
+.logo {
+   // background-color: gray;
+    height: 100px;
+    font-size:25px;
+    padding-top: 40px;
+    direction: rtl;
+    margin-top:20px;
+}
+.nav-bar{
+        // background-color:aqua;
+         height:100px;
+         margin-top:20px;        
+}
+.navbar{
+   margin-left:250px;
+    font-size:18px;
+    margin-top:30px;
+} 
+ .btnbook{
+    height:100px;
+    margin-top:20px;
+   // background-color:red;
+}
+ .btn-danger{
+     margin-top:40px;
+     margin-left:80px;
+ }
+.row.slider{
+        background-color:;
+        height:550px;
+      
+        
+}
+.container-fluid{ 
+           background-color:#fff;
+           height:auto;
+           margin-top:20px;
+           
+}
+.footer{
+        background-color:#333;
+        height:350px;
+        margin-top:100px;
+
+        
+}
+.col1{
+    //background:red;
+    height:300px;
+}
+.col1>ul{
+    list-style-type:none;
+    margin-top:50px;
+}
+.col1>ul>li{
+    color:#aeaeae;
+    margin-top:10px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+.col2{
+    //background:gray;
+    height:300px;
+}
+.col2>ul{
+    list-style-type:none;
+    margin-top:50px;
+}
+.col2>ul>li{
+     color:#aeaeae;
+    margin-top:10px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.col3{
+    //background:black;
+    height:300px;
+}
+.col3>ul{
+    list-style-type:none;
+    margin-top:50px;
+}
+.col3>ul>li{
+     color:#aeaeae;
+    margin-top:10px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+.col4{
+   // background:red;
+    height:300px;
+}
+.col44{
+    
+    margin-top:50px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.facebook{
+    background-color:red;
+    height:40px;
+    width:40px;
+    border:1px solid yellow;
+    border-radius:50%;
+}
+
+.facebook:hover,i{
+    
+    border-color:#fff;
+}
+
+
+/*.roomtext {
+             font-family:URW Chancery L,cursive;
+             font-style:italic;
+             
+              
+}*/
+
+
