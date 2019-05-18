@@ -79,6 +79,8 @@
     color:#aeaeae;
     margin-top:10px;
     font-family: 'Encode Sans Expanded', sans-serif;
+   
+   
 }
 .col2{
     //background:gray;
@@ -118,24 +120,26 @@
 }
 
 .facebook{
-    background-color:red;
+   
     height:40px;
     width:40px;
-    border:1px solid yellow;
+    text-align:center;
+    border:1px solid #999;
     border-radius:50%;
+    color:#999;
+   
 }
 
-.facebook:hover,i{
-    
+.facebook:hover{
+    color:#fff;
     border-color:#fff;
 }
+.col1>.social>li{
+    display:inline;
+    float:left;
+    margin-left:10px;
+}
 
 
-/*.roomtext {
-             font-family:URW Chancery L,cursive;
-             font-style:italic;
-             
-              
-}*/
 
 
