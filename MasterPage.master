@@ -90,9 +90,18 @@
                         <li>supporttheuniquehotel@gmail.com </li>
                         <li>Gajanan maharaj temple </li>
                     </ul>
-                    <ul>
+                    <ul class="social">
                         <li>
-                            <div class="facebook"><i style="font-size:22px;margin:9px 0px 10px 12px" class="fa">&#xf09a;</i></div>
+                            <div class="facebook"><i style="font-size:22px;margin-top: 10px;" class="fa">&#xf09a;</i></div>
+                        </li>
+                        <li>
+                            <div class="facebook"><i style="font-size:22px;margin-top: 10px;" class="fa">&#xf09a;</i></div>
+                        </li>
+                        <li>
+                            <div class="facebook"><i style="font-size:22px;margin-top: 10px;" class="fa">&#xf09a;</i></div>
+                        </li>
+                        <li>
+                            <div class="facebook"><i style="font-size:22px;margin-top: 10px;" class="fa">&#xf09a;</i></div>
                         </li>
                     </ul>
 
