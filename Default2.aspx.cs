@@ -11,4 +11,9 @@ public partial class Default2 : System.Web.UI.Page
     {
 
     }
+
+    protected void btnClickMe_Click(object sender, EventArgs e)
+    {
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModal();", true);
+    }
 }

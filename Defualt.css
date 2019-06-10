@@ -1,0 +1,81 @@
+﻿body {
+}
+
+.row11{
+ 
+}
+.row11>.col-md-3{
+    
+    
+    padding:0px;
+}
+.img1{
+        width:395px;
+       height:450px;
+
+}
+
+.parent {
+    width:400px;
+    margin:0px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+}
+.child {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+
+}
+
+.m1 {
+    display: none;
+    font-size: 35px;
+    color: #ffffff !important;
+    font-family: sans-serif;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    cursor: pointer;
+   text-decoration: none;
+}
+
+.parent:hover .child, .parent:focus .child {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    
+}
+
+.parent:hover .child:before, .parent:focus .child:before {
+    display: block;
+    
+}
+
+.parent:hover .m1, .parent:focus .m1 {
+    display: block;
+}
+
+.child:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(52, 73, 94, 0.22);
+}

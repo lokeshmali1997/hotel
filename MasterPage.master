@@ -5,141 +5,295 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-     <link rel="stylesheet" href="StyleSheet.css" />
- <meta charset="utf-8"/>
- <meta name="viewport" content="width=device-width, initial-scale=1"/>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
- <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <style>
-        .row{
-            margin:0px;
-        }
-        #myVideo {
+  <link rel="stylesheet" href="StyleSheet.css" />
+    <link href="booknow.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
 
-  position:absolute;
- z-index:-1;
-  min-width: 100%; 
-  min-height: 100%;
-  margin-left:-51px;
-}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <style>
+        .row {
+            margin: 0px;
+        }
+
+        #myVideo {
+            position: absolute;
+            z-index: -1;
+            min-width: 100%;
+            min-height: 100%;
+            margin-left: -51px;
+        }
+
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+            border: none;
+            border-bottom-color: none;
+        }
+
+        .input-group {
+            margin-top: 20px;   
+        }
+
+        .input-group-addon {
+            background: #fff;
+            border: none;
+        }
+
+        /*.form-control {
+            border: none;
+            box-shadow: none;
+            border-radius: 0px;
+        }*/
+
+        .textboxes:focus {
+            border-bottom: 1px solid grey;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .btn1 {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            background: #00cc99;
+            border-radius: 3px;
+            border: none;
+            min-width: 140px;
+            outline: none !important;
+            width: 540px;
+            height: 35px;
+        }
+
+            .btn1:hover {
+                background-color: #009973;
+            }
+            
     </style>
-    <asp:ContentPlaceHolder id="head" runat="server">    
+      
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    
+
         <div class="main-wrapper">
-        <div class="row header nav navbar-fixed-top">
-            <div class="col-sm-3 logo"> <span class="logo-name">The Unique Hotel</span></div>
-            <div class="col-sm-7 nav-bar">
+            <div class="row header nav navbar-fixed-top">
+                <div class="col-sm-3 logo"><span class="logo-name">The Unique Hotel</span></div>
+                <div class="col-sm-7 nav-bar">
 
-                <nav class="navbar ">
-  
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Room</a></li>
-          <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Service
+                    <nav class="navbar ">
+
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="Rooms.aspx">Room</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Service
         <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Dining</a></li>
-          <li><a href="#">Guest Room</a></li>
-          <li><a href="#">Meeting</a></li>
-          <li><a href="#">Event</a></li>
-          <li><a href="#">Spa & Gym</a></li>
-          <li><a href="#">Pool</a></li>
-        </ul>
-      </li>
-      <li><a href="gallery.aspx">Gallery</a></li>
-         <li><a href="#">Contact</a></li>
-    </ul>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Dining</a></li>
+                                    <li><a href="#">Guest Room</a></li>
+                                    <li><a href="#">Meeting</a></li>
+                                    <li><a href="#">Event</a></li>
+                                    <li><a href="#">Spa & Gym</a></li>
+                                    <li><a href="#">Pool</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="gallery.aspx">Gallery</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li></li>
+                        </ul>
 
-</nav>
-
-            </div>
-            <div class="col-sm-2 btnbook">
-
-                <button type="button" class="btn btn-danger">Book Now</button>
-            </div>
-        </div>
-            <div style="margin-top:150px">
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"  >
-        
-        </asp:ContentPlaceHolder>
-                </div>
-
-    <div class="footer" style="margin-top:10px;margin-bottom:20px;">
-        <div class="row">
-            <div class="col-sm-3" ><h3 style="margin-left:38px; font-family: Cinzel Decorative;color:#b0914f;">The Unique Hotel</h3></div>
-            <div class="col-sm-3"><h3 style="margin-left:38px;font-family: Cinzel Decorative; color:#b0914f;">Company</h3></div>
-            <div class="col-sm-3"><h3 style="margin-left:38px;font-family: Cinzel Decorative; color:#b0914f;">Services</h3></div>
-            <div class="col-sm-3"><h3 style="font-family: Cinzel Decorative;color:#b0914f;">Sign up for NewLetter</h3></div>
-
-        </div>
-           <div class="row">
-            
-                <div class="col-sm-3 col1">
-                    <ul>
-                        <li>+91 998 3044 487</li>
-                        <li>supporttheuniquehotel@gmail.com </li>
-                        <li>Gajanan maharaj temple </li>
-                    </ul>
-                    <ul class="social">
-                        <li>
-                            <div class="facebook"><i style="font-size:22px;margin-top: 10px;" class="fa">&#xf09a;</i></div>
-                        </li>
-                        <li>
-                            <div class="facebook"><i style="font-size:22px;margin-top: 10px;" class="fa">&#xf09a;</i></div>
-                        </li>
-                        <li>
-                            <div class="facebook"><i style="font-size:22px;margin-top: 10px;" class="fa">&#xf09a;</i></div>
-                        </li>
-                        <li>
-                            <div class="facebook"><i style="font-size:22px;margin-top: 10px;" class="fa">&#xf09a;</i></div>
-                        </li>
-                    </ul>
+                    </nav>
 
                 </div>
-                <div class="col-sm-3 col2">
-                    <ul>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>Home</li>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>About Us</li>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>Room</li>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>Services</li>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>Gallery</li>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>Contact</li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 col3">
-                    <ul>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>Dining</li>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>Guest Room</li>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>Meeting</li>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>Events</li>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>Spa</li>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>Gym</li>
-                        <li><i class="glyphicon glyphicon-menu-right"></i>Pool</li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 col4">
-                    <form>
-    <div class="input-group col44">
-      <input id="email" type="text" class="form-control" name="email" placeholder="Your Email" style="border-right:none;height:50px">
-        <span class="input-group-addon" style="background:#fff"><i class="glyphicon glyphicon-send"></i></span>
-    </div>
-                        </form>
+                <div class="col-sm-2 btnbook">
 
-                </div>
-            </div>
-        </div>
+
+               <div class="container">
+   <h2>Modal Example</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog" >
+    <div class="modal-dialog">
     
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 style="text-align:center;">Book Your Room</h3>
+
+  
+      <div class="row row1">
+        <div class="col-md-3">
+            <asp:Label ID="Label1" runat="server" Text="Check In"></asp:Label>
+            <asp:TextBox ID="chkin" runat="server" CssClass="form-control" ></asp:TextBox>
+         </div>
+            <div class="col-md-3">
+            <asp:Label ID="Label2" runat="server" Text="Check Out"></asp:Label>
+            <asp:TextBox ID="chkout" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+           <div class="col-md-3">
+            <asp:Label ID="Label4" runat="server" Text="Adults" ></asp:Label>
+             <span><i class="fas fa-user"></i></span>
+               <div class="dropdown">
+    <asp:DropDownList ID="ddladults" runat="server" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background:#fff;color:#000;">
+       
+        <asp:ListItem Value="0">----select----</asp:ListItem>
+        <asp:ListItem>1</asp:ListItem>
+        <asp:ListItem>2</asp:ListItem>
+        <asp:ListItem>3</asp:ListItem>
+        <asp:ListItem>4</asp:ListItem>
+    
+                       </asp:DropDownList>
+    
+  </div>
+               
+            </div>
+
+          <div class="col-md-3">
+            <asp:Label ID="Label3" runat="server" Text="Children"></asp:Label>
+             <span><i class="fas fa-user"></i></span>
+               <div class="dropdown">
+    <asp:DropDownList ID="ddlchildren" runat="server" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background:#fff;color:#000;">
+        <asp:ListItem Value="0">----select----</asp:ListItem>
+        <asp:ListItem>1</asp:ListItem>
+        <asp:ListItem>2</asp:ListItem>
+        <asp:ListItem>3</asp:ListItem>
+        <asp:ListItem>4</asp:ListItem>
+    
+                       </asp:DropDownList>
+    
+  </div>
+               
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col-md-6">
+                <span style="font-style:oblique">Check Availebility</span>
+            </div>
+            <div class="col-md-6">
+            <asp:Button ID="Search" runat="server" Text="Search" CssClass="searchbtn" />
+            </div>
+        </div>
+           
+       
+        </div>
+      
     </div>
+  </div>
+
+  
+</div>
+        </div>
+                </div>
+            </div>
+            <div style="margin-top: 150px">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div class="footer" style="margin-bottom: 0px">
+                <div class="row footer-header" style="margin-left: 80px; margin-right: 80px;">
+                    <div class="col-sm-3">
+                        <h3 style="margin-left: 38px;">The Unique Hotel</h3>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3 style="margin-left: 110px;">Company</h3>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3 style="margin-left: 38px; font-family: ">Services</h3>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Sign up for NewLetter</h3>
+                    </div>
+
+                </div>
+                <div class="row" style="margin-left: 80px; margin-right: 80px;">
+
+                    <div class="col-sm-3 col1">
+                        <ul>
+                            <li><i style="font-size: 16px; padding: 0px 15px;" class="fa">&#xf10b;</i>(+91) 998 3044 487</li>
+                            <li><i style="font-size: 16px; padding: 0px 10px;" class="material-icons">&#xe0be;</i>supporttheuniquehotel@gmail.com </li>
+                            <li><i style="font-size: 16px; padding: 0px 10px;" class="material-icons">&#xe0c8;</i>Gajanan maharaj temple </li>
+                        </ul>
+                        <ul>
+                            <li style="margin-left: 0px;">
+                                <div class="facebook"><a href="#"><i style="margin-top: 10px;" class="fa fa-facebook"></i></a></div>
+                            </li>
+                            <li>
+                                <div class="facebook"><a href="#"><i style="margin-top: 10px" class="fa fa-twitter"></i></a></div>
+                            </li>
+                            <li>
+                                <div class="facebook"><a href="#"><i style="margin-top: 10px" class="fa fa-google-plus"></i></a></div>
+                            </li>
+                            <li>
+                                <div class="facebook"><a href="#"><i style="margin-top: 10px" class="fa fa-instagram"></i></a></div>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-sm-3 col2">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Home</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>About Us</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Room</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Services</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Gallery</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col3">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Dining</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Guest Room</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Meeting</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Events</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Spa</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Gym</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Pool</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col4">
+                        
+                            <div class="input-group col44">
+                                <asp:TextBox ID="TextBox1" class="form-control" runat="server" placeholder="Your Email" Style=""></asp:TextBox>
+                                <span class="input-group-addon" style="background: #fff; color: black;"><a href="#" style="color: black;"><i class="glyphicon glyphicon-send"></i></a></span>
+                            </div>
+                        
+
+                    </div>
+                </div>
+
+                <div class="row footer-bottom" style="margin-left: 80px; margin-right: 80px;">
+
+                    <div class="col-sm-7 copyright-text">
+                        &copy; 2019 The Unique Hotel
+                    </div>
+                    <div class="col-sm-5">
+                        <ul class="copyright-menu">
+                            <li><a href="#">Term &amp; Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </form>
 </body>
 </html>

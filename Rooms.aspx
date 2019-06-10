@@ -1,20 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Rooms.aspx.cs" Inherits="Rooms" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Rooms.aspx.cs" Inherits="Default4" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
- <meta charset="utf-8"/>
- <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link href="room.css" rel="stylesheet" />
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<link href="room.css" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="container">
         <div class="row shadow">
             <div class="col-md-6">
@@ -46,7 +35,7 @@
     
       <div class="row">
             <div class="col-md-6">
-                <img src="image/r1.jpg" width="500" height="250" style="margin-top:20px; box-shadow:4px 4px 4px grey;"/>
+                <img src="image/r2.jpg" width="500" height="250" style="margin-top:20px; box-shadow:4px 4px 4px grey;"/>
             </div>
             <div class="col-md-6">
                 <div class="row">
@@ -74,7 +63,7 @@
       
         <div class="row">
             <div class="col-md-6">
-                <img src="image/r1.jpg" width="500" height="250" style="margin-top:20px; box-shadow:4px 4px 4px grey;"/>
+                <img src="image/r4.jpg" width="500" height="250" style="margin-top:20px; box-shadow:4px 4px 4px grey;"/>
             </div>
             <div class="col-md-6">
                 <div class="row">
@@ -99,7 +88,6 @@
                  </div>
             </div>
         </div>
-        </div> 
-    </form>
-</body>
-</html>
+        </div>
+</asp:Content>
+
