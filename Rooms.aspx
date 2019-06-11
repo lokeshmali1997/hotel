@@ -23,21 +23,21 @@
                          </div>
                          <div class="row">
                          <div class="col-md-6">
-                             <p>Starting From:$200</p>
+                              <p>Starting From: <asp:Label ID="lblsingleroomprice" runat="server" Text="Rs1000"></asp:Label></p>
                          </div>
                          <div class="col-md-6"> 
-                                <asp:HyperLink ID="HyperLink1" runat="server" class="bookme">Book Now</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink1" runat="server" class="bookme" NavigateUrl="~/mybooking.aspx">Book Now</asp:HyperLink>
                          </div>
                          </div>
                  </div>
             </div>
         </div>
     
-      <div class="row">
+      <div class="row shadow">
             <div class="col-md-6">
                 <img src="image/r2.jpg" width="500" height="250" style="margin-top:20px; box-shadow:4px 4px 4px grey;"/>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 ">
                 <div class="row">
                          <h2 style="font-variant:small-caps">Single Room</h2>
                          <div class="roomtext"> 
@@ -51,17 +51,18 @@
                          </div>
                          <div class="row">
                          <div class="col-md-6">
-                             <p>Starting From:$200</p>
+                             <p>Starting From: <asp:Label ID="lbldoubleroomprice" runat="server" Text="Rs2000"></asp:Label></p>
+                             
                          </div>
                          <div class="col-md-6"> 
-                                <asp:HyperLink ID="HyperLink2" runat="server" class="bookme">Book Now</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink2" runat="server" class="bookme" NavigateUrl="~/mybooking.aspx">Book Now</asp:HyperLink>
                          </div>
                          </div>
                  </div>
             </div>
         </div>
       
-        <div class="row">
+        <div class="row shadow">
             <div class="col-md-6">
                 <img src="image/r4.jpg" width="500" height="250" style="margin-top:20px; box-shadow:4px 4px 4px grey;"/>
             </div>
@@ -79,10 +80,10 @@
                          </div>
                          <div class="row">
                          <div class="col-md-6">
-                             <p>Starting From:$200</p>
+                              <p>Starting From: <asp:Label ID="lblluxuryroomprice" runat="server" Text="Rs3000"></asp:Label></p>
                          </div>
                          <div class="col-md-6"> 
-                                <asp:HyperLink ID="HyperLink3" runat="server" class="bookme">Book Now</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink3" runat="server" class="bookme" NavigateUrl="~/mybooking.aspx">Book Now</asp:HyperLink>
                          </div>
                          </div>
                  </div>
