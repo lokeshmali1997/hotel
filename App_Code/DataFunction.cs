@@ -5,7 +5,7 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-//Developed By:Mr.Arvind Singh Chauhan
+
 //Developed On:01-jan-2012
 //Purpose:This class contains functions to handle database connectivity;
 
