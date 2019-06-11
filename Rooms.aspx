@@ -23,7 +23,7 @@
                          </div>
                          <div class="row">
                          <div class="col-md-6">
-                              <p>Starting From: <asp:Label ID="lblsingleroomprice" runat="server" Text="Rs1000"></asp:Label></p>
+                              <p>Rs: <asp:Label ID="lblsingleroomprice" runat="server" Text="1000" style="color:red;font-size:15px;"></asp:Label></p>
                          </div>
                          <div class="col-md-6"> 
                                 <asp:HyperLink ID="HyperLink1" runat="server" class="bookme" NavigateUrl="~/mybooking.aspx">Book Now</asp:HyperLink>
@@ -39,7 +39,7 @@
             </div>
             <div class="col-md-6 ">
                 <div class="row">
-                         <h2 style="font-variant:small-caps">Single Room</h2>
+                         <h2 style="font-variant:small-caps">Double Room</h2>
                          <div class="roomtext"> 
                          <h3>Facilities</h3>
                          <p><i class="fas fa-tv"></i>Television</p>
@@ -51,7 +51,7 @@
                          </div>
                          <div class="row">
                          <div class="col-md-6">
-                             <p>Starting From: <asp:Label ID="lbldoubleroomprice" runat="server" Text="Rs2000"></asp:Label></p>
+                             <p>Rs: <asp:Label ID="lbldoubleroomprice" runat="server" Text="2000" style="color:red;font-size:15px;"></asp:Label></p>
                              
                          </div>
                          <div class="col-md-6"> 
@@ -68,10 +68,10 @@
             </div>
             <div class="col-md-6">
                 <div class="row">
-                         <h2 style="font-variant:small-caps">Single Room</h2>
+                         <h2 style="font-variant:small-caps">Luxury Room</h2>
                          <div class="roomtext"> 
                          <h3>Facilities</h3>
-                         <p><i class="fas fa-tv"></i>&nbsp; &nbsp; Television</p>
+                         <p><i class="fas fa-tv"></i>Television</p>
                          <p><i class="fas fa-wifi"></i>Wi-Fi</p>
                              
                          <p><i class="fas fa-coffee"></i>Breakfast</p>
@@ -80,7 +80,7 @@
                          </div>
                          <div class="row">
                          <div class="col-md-6">
-                              <p>Starting From: <asp:Label ID="lblluxuryroomprice" runat="server" Text="Rs3000"></asp:Label></p>
+                              <p>Rs: <asp:Label ID="lblluxuryroomprice" runat="server" Text="3000" style="color:red;font-size:15px;"></asp:Label></p>
                          </div>
                          <div class="col-md-6"> 
                                 <asp:HyperLink ID="HyperLink3" runat="server" class="bookme" NavigateUrl="~/mybooking.aspx">Book Now</asp:HyperLink>
