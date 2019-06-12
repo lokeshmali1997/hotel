@@ -112,7 +112,7 @@
      <div id="menu1" class="tab-pane fade">
         <div class="input-group">
                 <span class="input-group-addon"><i class="fas fa-user"></i></span>
-            <asp:TextBox ID="TextBox1" runat="server" placeholder="Enter Your Number" CssClass="form-control  textboxes"></asp:TextBox> 
+            <asp:TextBox ID="TextBox1" runat="server" placeholder="Enter Your Number or Email" CssClass="form-control  textboxes"></asp:TextBox> 
             </div>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fas fa-key"></i></span>
