@@ -59,8 +59,13 @@
                                 <asp:Label ID="Label6" CssClass="txt-col" runat="server" Text="Mon, 15 Oct 2018"></asp:Label>
                                 </div>
                             </div>
+                            <div class="col-md-2"></div>
                             <div class="col-md-2">
-
+                                <div class="media-body" style="text-align:right">
+                                <h5 class="media-heading headofMedia" style="font-size:17px"><asp:Label ID="Label7" runat="server" Text="Checked Out"></asp:Label></h5>
+                                <asp:Label ID="Label8" CssClass="txt-col " runat="server" Text="Amt. 1287"></asp:Label> <br />
+                                <asp:LinkButton ID="LinkButton1" CssClass="txt-col" runat="server" Font-Underline="True">View Details</asp:LinkButton>
+                                </div>
                             </div>
                         </div>
                     </div>
