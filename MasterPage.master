@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-  <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="stylesheet" href="StyleSheet.css" />
     <link href="booknow.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,12 +17,12 @@
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-   
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <style>
+    <style>
         .row {
             margin: 0px;
         }
@@ -41,7 +41,7 @@
         }
 
         .input-group {
-            margin-top: 20px;   
+            margin-top: 20px;
         }
 
         .input-group-addon {
@@ -77,9 +77,8 @@
             .btn1:hover {
                 background-color: #009973;
             }
-            
     </style>
-      
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -121,7 +120,7 @@
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Book Now</button>
 
 
- 
+
                 </div>
             </div>
             <div style="margin-top: 150px">
@@ -191,12 +190,12 @@
                         </ul>
                     </div>
                     <div class="col-sm-3 col4">
-                        
-                            <div class="input-group col44">
-                                <asp:TextBox ID="TextBox1" class="form-control" runat="server" placeholder="Your Email" Style=""></asp:TextBox>
-                                <span class="input-group-addon" style="background: #fff; color: black;"><a href="#" style="color: black;"><i class="glyphicon glyphicon-send"></i></a></span>
-                            </div>
-                        
+
+                        <div class="input-group col44">
+                            <asp:TextBox ID="TextBox1" class="form-control" runat="server" placeholder="Your Email" Style=""></asp:TextBox>
+                            <span class="input-group-addon" style="background: #fff; color: black;"><a href="#" style="color: black;"><i class="glyphicon glyphicon-send"></i></a></span>
+                        </div>
+
 
                     </div>
                 </div>
@@ -217,79 +216,74 @@
             </div>
 
         </div>
-         <div class="container">
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog" >
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h3 style="text-align:center;">Book Your Room</h3>
+        <div class="container">
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
 
-  
-      <div class="row row1">
-        <div class="col-md-3">
-            <asp:Label ID="Label1" runat="server" Text="Check In"></asp:Label>
-            <asp:TextBox ID="chkin" runat="server" CssClass="form-control" ></asp:TextBox>
-         </div>
-            <div class="col-md-3">
-            <asp:Label ID="Label2" runat="server" Text="Check Out"></asp:Label>
-            <asp:TextBox ID="chkout" runat="server" CssClass="form-control"></asp:TextBox>
-            </div>
-           <div class="col-md-3">
-            <asp:Label ID="Label4" runat="server" Text="Adults" ></asp:Label>
-             <span><i class="fas fa-user"></i></span>
-               <div class="dropdown">
-    <asp:DropDownList ID="ddladults" runat="server" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background:#fff;color:#000;">
-       
-        <asp:ListItem Value="0">----select----</asp:ListItem>
-        <asp:ListItem>1</asp:ListItem>
-        <asp:ListItem>2</asp:ListItem>
-        <asp:ListItem>3</asp:ListItem>
-        <asp:ListItem>4</asp:ListItem>
-    
-                       </asp:DropDownList>
-    
-  </div>
-               
-            </div>
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 style="text-align: center;">Book Your Room</h3>
 
-          <div class="col-md-3">
-            <asp:Label ID="Label3" runat="server" Text="Children"></asp:Label>
-             <span><i class="fas fa-user"></i></span>
-               <div class="dropdown">
-    <asp:DropDownList ID="ddlchildren" runat="server" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background:#fff;color:#000;">
-        <asp:ListItem Value="0">----select----</asp:ListItem>
-        <asp:ListItem>1</asp:ListItem>
-        <asp:ListItem>2</asp:ListItem>
-        <asp:ListItem>3</asp:ListItem>
-        <asp:ListItem>4</asp:ListItem>
-    
-                       </asp:DropDownList>
-    
-  </div>
-               
-            </div>
-        </div>
-        <div class="row row2">
-            <div class="col-md-6">
-                <span style="font-style:oblique">Check Availebility</span>
-            </div>
-            <div class="col-md-6">
-            <asp:Button ID="Search" runat="server" Text="Search" CssClass="searchbtn" />
-            </div>
-        </div>
-           
-       
-        </div>
-      
-    </div>
-  </div>
 
-  
-</div>
+                            <div class="row row1">
+                                <div class="col-md-3">
+                                    <asp:Label ID="Label1" runat="server" Text="Check In"></asp:Label>
+                                    <asp:TextBox ID="chkin" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:Label ID="Label2" runat="server" Text="Check Out"></asp:Label>
+                                    <asp:TextBox ID="chkout" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:Label ID="Label4" runat="server" Text="Adults"></asp:Label>
+                                    <span><i class="fas fa-user"></i></span>
+                                    <div class="dropdown">
+                                        <asp:DropDownList ID="ddladults" runat="server" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" Style="background: #fff; color: #000;">
+
+                                            <asp:ListItem Value="0">----select----</asp:ListItem>
+                                            <asp:ListItem>1</asp:ListItem>
+                                            <asp:ListItem>2</asp:ListItem>
+                                            <asp:ListItem>3</asp:ListItem>
+                                            <asp:ListItem>4</asp:ListItem>
+
+                                        </asp:DropDownList>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-3">
+                                    <asp:Label ID="Label3" runat="server" Text="Children"></asp:Label>
+                                    <span><i class="fas fa-user"></i></span>
+                                    <div class="dropdown">
+                                        <asp:DropDownList ID="ddlchildren" runat="server" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" Style="background: #fff; color: #000;">
+                                            <asp:ListItem Value="0">----select----</asp:ListItem>
+                                            <asp:ListItem>1</asp:ListItem>
+                                            <asp:ListItem>2</asp:ListItem>
+                                            <asp:ListItem>3</asp:ListItem>
+                                            <asp:ListItem>4</asp:ListItem>
+
+                                        </asp:DropDownList>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row row2">
+                                <div class="col-md-6">
+                                    <span style="font-style: oblique">Check Availebility</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <asp:Button ID="Search" runat="server" Text="Search" CssClass="searchbtn" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
 </body>
