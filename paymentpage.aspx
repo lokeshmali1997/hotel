@@ -226,13 +226,21 @@
 
              <div id="GooglePay" class="tab-pane fade" style="margin-bottom:2%;">
                  <div class="row">
-                     <div class="col-md-6">
+                     <div class="col-md-5">
                             <span>1.  Enter VPA<i><h6> you must have a Virtual Payment Address </h6></i></span>
                          <asp:TextBox ID="txtupiid" runat="server" placeholder="Enter UPI ID" CssClass="form-control" Width="45%"></asp:TextBox>     
                      </div>
-                     <div class="col-md-6">
+                     <div class="col-md-2">
+                         <p style="font-size:20px; margin-top:55px;">@</p>
+                     </div>
+                     <div class="col-md-5">
                           <span>2.  Receive payment request on bank app<i><h6> keep your smart phone handy </h6></i></span>
-                         <asp:TextBox ID="txtok" runat="server" CssClass="form-control" Width="45%" placeholder="ok"></asp:TextBox>
+                         <asp:DropDownList ID="ddlokbanks" runat="server" CssClass="form-control" Width="45%">
+                             <asp:ListItem Value="1">okicici</asp:ListItem>
+                             <asp:ListItem Value="2">okaxis</asp:ListItem>
+                             <asp:ListItem Value="3">okhdfcbank</asp:ListItem>
+                             <asp:ListItem Value="4">oksbi</asp:ListItem>
+                          </asp:DropDownList>
                      </div>
                  </div>
                  <div class="row">
