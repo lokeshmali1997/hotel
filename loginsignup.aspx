@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-   
+   <script src="~/Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+     <script src="~/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
     <link href="Defualt.css" rel="stylesheet" />
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
     
@@ -61,9 +63,153 @@
         .btn1:hover {
                     background-color:#009973;        
              }
-         
+         .errormsg {
+            
+             color:red;
+            
+         }
         
     </style>
+    <script>
+        function name()
+        {
+            var name = document.getElementById("txtname").value;
+           
+            if (name == "") {
+                document.getElementById("nameerror").innerHTML = "Name is Empty";
+            }
+            else if(!isNaN(name))
+            {
+                document.getElementById("nameerror").innerHTML = "Name is invalid";
+            }
+            else
+            {
+                document.getElementById("nameerror").innerHTML = "";
+            }
+        }
+        function email()
+        {
+           
+            var email = document.getElementById("txtemail").value;
+            var atposition = email.indexOf("@");
+            var dotposition = email.dotposition;
+            if (email == "") {
+                document.getElementById("emailerror").innerHTML = "email is Empty";
+
+            }
+            else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length) {
+                document.getElementById("emailerror").innerHTML = "email is not correct";
+            }
+            else {
+                document.getElementById("emailerror").innerHTML = "";
+            }
+           
+        }
+        function password()
+        {
+            var password = document.getElementById("password").value;
+            if(password=="")
+            {
+                document.getElementById("passerror").innerHTML = "password is Empty";
+            }
+            else {
+                document.getElementById("passerror").innerHTML = "";
+            }
+        }
+        function conformpassword()
+        {
+            var password = document.getElementById("password").value;
+            var confpass = document.getElementById("passwordconfirm").value;
+            if(confpass=="")
+            {
+                document.getElementById("confpasserror").innerHTML = "confirm password is Empty";
+            }
+            else if(password!=confpass)
+            {
+                document.getElementById("confpasserror").innerHTML = " password not match";
+            }
+            else {
+                document.getElementById("confpasserror").innerHTML = "";
+            }
+        }
+        function state()
+        {
+            var state = document.getElementById("txtaddress").value;
+            if(state=="")
+            {
+                document.getElementById("stateerror").innerHTML = " state is empty";
+            }
+            else {
+                document.getElementById("stateerror").innerHTML = "";
+            }
+        }
+        function number()
+        {
+            var number = document.getElementById("txtnumber").value;
+            if(number=="")
+            {
+                document.getElementById("numbererror").innerHTML = " number is empty";
+            }
+            else if(number.length!=10)
+            {
+                document.getElementById("numbererror").innerHTML = " number is wrong";
+            }
+            else if(isNaN(number))
+            {
+                document.getElementById("numbererror").innerHTML = " enter number value only";
+            }
+            else {
+                document.getElementById("numbererror").innerHTML = "";
+            }
+        }
+        function validate() {
+          
+            name();
+            email();
+            password();
+            conformpassword();
+            state();
+            number();
+        }
+
+            function loginemail()
+        {
+           
+            var loginemail = document.getElementById("loginemail").value;
+            var atposition = loginemail.indexOf("@");
+            var dotposition = loginemail.dotposition;
+            if (loginemail == "") {
+                document.getElementById("loginemailerror").innerHTML = "email is Empty";
+
+            }
+            else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= loginemail.length) {
+                document.getElementById("loginemailerror").innerHTML = "email is not correct";
+            }
+            else {
+                document.getElementById("loginemailerror").innerHTML = "";
+            }
+           
+        }
+        function loginpassword()
+        {
+            var loginpassword = document.getElementById("loginpass").value;
+            if(loginpassword=="")
+            {
+                document.getElementById("loginpasserror").innerHTML = "password is Empty";
+            }
+            else {
+                document.getElementById("loginpasserror").innerHTML = "";
+            }
+        }
+            function loginvalidate() {
+          
+            loginemail();
+            loginpassword();
+            
+        }
+        
+
+        </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -91,20 +237,41 @@
        <div class="row">
         <div class="col-md-12">
         <h3>SIGN UP</h3>
+             <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-send"></i></span>
+            <asp:TextBox ID="txtname" runat="server" placeholder="Enter Your Name" CssClass="form-control textboxes"></asp:TextBox> 
+        <div id="nameerror" class="errormsg"></div>
+                   </div>
+        
+            
+            
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-send"></i></span>
             <asp:TextBox ID="txtemail" runat="server" placeholder="Enter Your Email" CssClass="form-control textboxes"></asp:TextBox> 
-            </div>
+               <div id="emailerror" class="errormsg"></div>
+                 </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-send"></i></span>
+            <asp:TextBox ID="txtaddress" runat="server" placeholder="Enter Your State" CssClass="form-control textboxes"></asp:TextBox> 
+                <div id="stateerror" class="errormsg"></div>
+                 </div>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fas fa-user"></i></span>
             <asp:TextBox ID="txtnumber" runat="server" placeholder="Enter Your Number" CssClass="form-control  textboxes"></asp:TextBox> 
-            </div>
+            <div id="numbererror" class="errormsg"></div>
+                 </div>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fas fa-key"></i></span>
-            <asp:TextBox ID="password" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes"></asp:TextBox> 
-            </div>
+            <asp:TextBox ID="password" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox> 
+                           <div id="passerror" class="errormsg"></div>
+                  </div>
             <div class="input-group">
-                <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1" />
+                <span class="input-group-addon"><i class="fas fa-key"></i></span>
+            <asp:TextBox ID="passwordconfirm" runat="server" placeholder="Confirm Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox> 
+                               <div id="confpasserror" class="errormsg"></div>
+                 </div>
+            <div class="input-group">
+                <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1"  OnClientClick="validate()" />
             </div>
             </div>
            </div>
@@ -112,18 +279,22 @@
      <div id="menu1" class="tab-pane fade">
         <div class="input-group">
                 <span class="input-group-addon"><i class="fas fa-user"></i></span>
-            <asp:TextBox ID="TextBox1" runat="server" placeholder="Enter Your Number or Email" CssClass="form-control  textboxes"></asp:TextBox> 
-            </div>
+            <asp:TextBox ID="loginemail" runat="server" placeholder="Enter Your Email" CssClass="form-control  textboxes"></asp:TextBox> 
+          <%--   <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Email is Empty" ControlToValidate="loginemail" ForeColor="Red"></asp:RequiredFieldValidator>
+          <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Invalid Email" ControlToValidate="loginemail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+          --%>    <div id="loginemailerror" class="errormsg"></div>
+              </div>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fas fa-key"></i></span>
-            <asp:TextBox ID="TextBox2" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes"></asp:TextBox> 
-            </div>
+            <asp:TextBox ID="loginpass" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox> 
+           <%--   <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Password is Empty" ControlToValidate="loginpass" ForeColor="Red"></asp:RequiredFieldValidator>
+             --%> <div id="loginpasserror" class="errormsg"></div> 
+                 </div>
             <div class="input-group">
-                <asp:Button ID="Button1" runat="server" Text="Sign Up" CssClass="btn1" />
+                <asp:Button ID="btnlogin" runat="server" Text="Log In" CssClass="btn1" OnClientClick="loginvalidate()" />
             </div>
-    
-    </div>
-    
+        </div>
+ 
   </div>      
        
         </div>
