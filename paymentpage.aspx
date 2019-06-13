@@ -14,18 +14,24 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-     <div class="container" style="border:1px solid grey; margin-top:5%; border-radius:3px;">
-         <div style="margin:20px;">
-            <ul class="nav  nav-tabs">
+    
+     <div class="container" style="border:none; margin-top:5%; border-radius:3px; box-shadow:4px 4px 8px silver; background-color:#333333;">
+         <div style="margin-top:5px; background-color:#333333;">
+            <ul class="nav  nav-tabs" style="border:none;">
                 <li class="active"><a  data-toggle="tab" href="#Debitcard">Debitcard</a></li>
                 <li><a  data-toggle="tab" href="#Netbanking">Netbanking</a></li>
-                <li><a href="#">Menu 2</a></li>
+                <li><a  data-toggle="tab" href="#GooglePay">GooglePay</a></li>
                 <li><a href="#">Menu 3</a></li>
             </ul>
+         <div class="row" style="background-color:#e0ebeb;">
+             <div class="col-md-12">
          <div class="tab-content" style="margin-top:30px;">
              <div id="Debitcard" class="tab-pane fade in active">
-                 
+                 <div class="row">
+                     <div class="col-md-12">
+                    
+                     </div>
+                 </div>
                  <div class="row">
                      <div class="col-md-6">
                          <asp:Label ID="lblcardnumber" runat="server" Text="Card Number"></asp:Label>
@@ -39,7 +45,7 @@
                  <div class="row">
                      <div class="col-md-3" style="margin-top:2%;">
                          
-                         <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control" Width="45%">
+                         <asp:DropDownList ID="ddlmonth" runat="server" CssClass="form-control" Width="45%">
                              <asp:ListItem Value="0">Month</asp:ListItem>
                              <asp:ListItem Value="1">01</asp:ListItem>
                              <asp:ListItem Value="2">02</asp:ListItem>
@@ -58,7 +64,7 @@
                      </div>
                      <div class="col-md-3" style="margin-top:2%; ">
                          
-                         <asp:DropDownList ID="DropDownList2" runat="server" CssClass="form-control" Width="45%">
+                         <asp:DropDownList ID="ddlyear" runat="server" CssClass="form-control" Width="45%">
                              <asp:ListItem Value="0">year</asp:ListItem>
                              <asp:ListItem Value="1">2019</asp:ListItem>
                              <asp:ListItem Value="2">2020</asp:ListItem>
@@ -85,15 +91,68 @@
                          <p>Rs: <asp:Label ID="lblprice" runat="server" Text="1000" style="color:red;font-size:30px;"></asp:Label></p>
                      </div>
                      <div class="col-md-6">
-                         <asp:Button ID="btnmakepayment" runat="server" Text="Make Payment" />
+                         <asp:Button ID="btnmakepayment" runat="server" Text="Make Payment" class="formakepayment"/>
                      </div>
                  </div>
              </div>
-             <div id="Netbanking" class="tab-pane fade">
-                 <span> me </span>
+             <div id="Netbanking" class="tab-pane fade" style="margin-bottom:2%;">
+                 <div class="row">
+                     <div class="col-md-12">
+                         <span style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Pay Using Net Banking. You will be required to login ID and password. </span>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-md-6" >
+                         
+                         <asp:DropDownList ID="ddlbanks" runat="server" CssClass="form-control" Width="70%">
+                             <asp:ListItem Value="0">Select Your Banks</asp:ListItem>
+                             <asp:ListItem Value="1">Axis Bank</asp:ListItem>
+                             <asp:ListItem Value="2">Bank Of Baroda Bank</asp:ListItem>
+                             <asp:ListItem Value="3">Punjab National Bank</asp:ListItem>
+                             <asp:ListItem Value="4">Sbi Bank</asp:ListItem>
+                             <asp:ListItem Value="5">HDFC Bank</asp:ListItem>
+                             <asp:ListItem Value="6">Union Bank</asp:ListItem>
+                             <asp:ListItem Value="7">BOI bank</asp:ListItem>
+                             <asp:ListItem Value="8">----</asp:ListItem>
+                             <asp:ListItem Value="9">----</asp:ListItem>
+                             <asp:ListItem Value="10">----</asp:ListItem>
+                             <asp:ListItem Value="11">----</asp:ListItem>
+                             <asp:ListItem Value="12">----</asp:ListItem>
+                         </asp:DropDownList>       
+                          <p>Rs: <asp:Label ID="lblprice1" runat="server" Text="1000" style="color:red;font-size:30px;"></asp:Label></p>
+                     </div>
+                    <div class="col-md-6">
+                        <asp:Button ID="btnmakepayment2" runat="server" Text="Make Payment" CssClass="formakepayment"/>
+                    </div>
+                     </div>
+             </div>
+
+
+             <div id="GooglePay" class="tab-pane fade" style="margin-bottom:2%;">
+                 <div class="row">
+                     <div class="col-md-6">
+                            <span>1.  Enter VPA<i><h6> you must have a Virtual Payment Address </h6></i></span>
+                         <asp:TextBox ID="txtupiid" runat="server" placeholder="Enter UPI ID" CssClass="form-control" Width="45%"></asp:TextBox>     
+                     </div>
+                     <div class="col-md-6">
+                          <span>2.  Receive payment request on bank app<i><h6> keep your smart phone handy </h6></i></span>
+                         <asp:TextBox ID="txtok" runat="server" CssClass="form-control" Width="45%" placeholder="ok"></asp:TextBox>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-md-6">
+                            <span>3.  Authorize payment request <i> <h6>Go to  transaction in bank app to  approve </h6></i></span>
+                             <p>Rs: <asp:Label ID="lblprice2" runat="server" Text="1000" style="color:red;font-size:30px;"></asp:Label></p> 
+                     </div>
+                     <div class="col-md-6">
+                          <asp:Button ID="btnmakepayment3" runat="server" Text="Make Payment" CssClass="formakepayment"/>
+                     </div>
+                 </div>
              </div>
          </div>
-        </div>    
+        </div>
+        </div>
+            
     </div>    
     </div>
     </form>
