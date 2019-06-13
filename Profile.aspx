@@ -84,7 +84,7 @@
                                         <asp:Label ID="Label7" runat="server" Text="Checked Out"></asp:Label></h5>
                                     <asp:Label ID="Label8" CssClass="txt-col " runat="server" Text="Amt. 1287"></asp:Label>
                                     <br />
-                                    <asp:LinkButton ID="LinkButton1" CssClass="txt-col" runat="server" Font-Underline="True">View Details</asp:LinkButton>
+                                    <asp:LinkButton ID="LinkButton1" CssClass="txt-col" runat="server" Font-Underline="True" PostBackUrl="~/Details.aspx">View Details</asp:LinkButton>
                                 </div>
                             </div>
                         </div>
