@@ -23,6 +23,8 @@
          .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
               border:none;
               border-bottom-color:none;
+              color:#005c99;
+              
          }
          .input-group {
                     margin-top:20px;
@@ -50,7 +52,7 @@
                   color:white;
                   font-size: 16px;
                   font-weight: bold;
-                  background: #00cc99;
+                  background-image:linear-gradient(to right,#4db8ff ,#005c99);
                   border-radius: 3px;
                   border: none;
                   min-width: 140px;
@@ -61,16 +63,28 @@
         .btn1:hover {
                     background-color:#009973;        
              }
-         
+         .btn-info
+         {
+             background-image:linear-gradient(to right ,#4db8ff ,#005c99);
+             border:none;
+             width:200px;
+             height:30px;
+             outline:none !important;
+             font-size:14px;         
+         }
+         .nav-tabs>li>a
+         {
+             color:black;
+             font-size:20px;
+         }
         
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div class="container">
-   <h2>Modal Example</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+     <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal" >Make Your A/C &nbsp<span class="glyphicon glyphicon-chevron-down" ></span></button>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog" >
@@ -81,7 +95,7 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
          <ul class="nav nav-tabs" style="border-bottom:none;">
-    <li class="active"><a data-toggle="tab" href="#home">Sign Up</a></li>
+    <li class="active"><a data-toggle="tab" href="#home" >Sign Up</a></li>
     <li><a data-toggle="tab" href="#menu1">Login</a></li>
     
   </ul>
@@ -90,7 +104,7 @@
     <div id="home" class="tab-pane fade in active">
        <div class="row">
         <div class="col-md-12">
-        <h3>SIGN UP</h3>
+        <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">SIGN UP</h3>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-send"></i></span>
             <asp:TextBox ID="txtemail" runat="server" placeholder="Enter Your Email" CssClass="form-control textboxes"></asp:TextBox> 
@@ -110,7 +124,10 @@
            </div>
     </div>
      <div id="menu1" class="tab-pane fade">
-        <div class="input-group">
+         <div class="row">
+             <div class="col-md-12">
+                 <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">LOGIN</h3>
+                        <div class="input-group">
                 <span class="input-group-addon"><i class="fas fa-user"></i></span>
             <asp:TextBox ID="TextBox1" runat="server" placeholder="Enter Your Number or Email" CssClass="form-control  textboxes"></asp:TextBox> 
             </div>
@@ -120,7 +137,19 @@
             </div>
             <div class="input-group">
                 <asp:Button ID="Button1" runat="server" Text="Sign Up" CssClass="btn1" />
+                 
             </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="#">Forget Password ?</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="#" style="margin-left:130px;">Reset Password</a>
+                </div>
+            </div>
+    
+             </div>
+         </div>
     
     </div>
     

@@ -63,7 +63,7 @@
                     </div>
                     <div class="row textboxes">
                         <div class="col-md-12">
-                            <asp:Button ID="btnreserve" runat="server" Text="Reserve Your Room" CssClass="reserve"/>
+                            <asp:Button ID="btnreserve" runat="server" Text="Reserve Your Room" CssClass="reserve" PostBackUrl="~/paymentpage.aspx"/>
                         </div>
                     </div>
                 </div>
