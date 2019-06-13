@@ -21,10 +21,12 @@
     <script>
         function cardno()
         {
-       
+            
+           
+           
             var no = document.getElementById("txtcardnumber").value;
             var lengths = no.length;
-         
+            var value = no[0];
           
              if(no=="")
             {
@@ -39,6 +41,10 @@
           {
 
               document.getElementById("cardnoerror").innerHTML = "enter only number";
+          }
+          else if(value!=4)
+          {
+              document.getElementById("cardnoerror").innerHTML = "invalid card no";
           }
             else
             {
