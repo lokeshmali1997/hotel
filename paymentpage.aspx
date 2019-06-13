@@ -105,8 +105,8 @@
             
 
     
-     <div class="container" style="border:1px solid grey; margin-top:5%; border-radius:3px;">
-         <div style="margin:20px;">
+     
+         <div style="margin-top:20px;">
             <ul class="nav  nav-tabs">
 
                 <li class="active"><a  data-toggle="tab" href="#Debitcard">Debitcard</a></li>
@@ -186,7 +186,7 @@
                      </div>
                      <div class="col-md-6">
 
-                        <asp:Button ID="btnmakepayment" runat="server"  Text="Make Payment" OnClientClick="paymentvalidate()" />
+                        <asp:Button ID="btnmakepayment" runat="server" Text="Make Payment" OnClientClick="paymentvalidate()"  CssClass="formakepayment"/>
 
                      </div>
                  </div>

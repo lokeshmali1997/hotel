@@ -75,11 +75,10 @@
              outline:none !important;
              font-size:14px;         
          }
-         .nav-tabs>li>a
-         {
-             color:black;
-             font-size:20px;
-
+         .nav-tabs > li > a {
+             color: black;
+             font-size: 20px;
+         }
          .errormsg {
             
              color:red;
@@ -256,7 +255,7 @@
 
         <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">SIGN UP</h3>
 
-       
+       </div>
              <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-send"></i></span>
             <asp:TextBox ID="txtname" runat="server" placeholder="Enter Your Name" CssClass="form-control textboxes"></asp:TextBox> 
@@ -271,8 +270,6 @@
             <asp:TextBox ID="txtemail" runat="server" placeholder="Enter Your Email" CssClass="form-control textboxes"></asp:TextBox> 
                <div id="emailerror" class="errormsg"></div>
                  </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-send"></i></span>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fas fa-user"></i></span>
             <asp:TextBox ID="txtnumber" runat="server" placeholder="Enter Your Number" CssClass="form-control  textboxes"></asp:TextBox> 
@@ -292,27 +289,26 @@
                 <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1"  OnClientClick="validate()" />
             </div>
             </div>
-           </div>
-    </div>
+           
+            
+         </div>
      <div id="menu1" class="tab-pane fade">
          <div class="row">
              <div class="col-md-12">
                  <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">LOGIN</h3>
-                        <div class="input-group">
+              </div>          
+              <div class="input-group">
                 <span class="input-group-addon"><i class="fas fa-user"></i></span>
             <asp:TextBox ID="loginemail" runat="server" placeholder="Enter Your Email" CssClass="form-control  textboxes"></asp:TextBox> 
             <div id="loginemailerror" class="errormsg"></div>
               </div>
-            <div class="input-group">
+            <div class="input-group" style="margin-bottom:20px;">
                 <span class="input-group-addon"><i class="fas fa-key"></i></span>
             <asp:TextBox ID="loginpass" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox> 
          <div id="loginpasserror" class="errormsg"></div> 
                  </div>
-            <%--<div class="input-group">
-
-                <asp:Button ID="Button1" runat="server" Text="Sign Up" CssClass="btn1" />
-                 
-            </div>--%>
+    <asp:Button ID="btnlogin" runat="server" Text="Log In" CssClass="btn1" OnClientClick="loginvalidate()" />
+         
             <div class="row">
                 <div class="col-md-6">
                     <a href="#">Forget Password ?</a>
@@ -322,14 +318,14 @@
                 </div>
             </div>
     
-             </div>
+             
          </div>
+
     
     </div>
     
 
-                <asp:Button ID="btnlogin" runat="server" Text="Log In" CssClass="btn1" OnClientClick="loginvalidate()" />
-            </div>
+                          
         </div>
  
 
