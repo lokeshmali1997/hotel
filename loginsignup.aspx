@@ -232,10 +232,10 @@
     <form id="form1"  onsubmit="return false;" runat="server">
     <div class="container">
      <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal" >Make Your A/C &nbsp<span class="glyphicon glyphicon-chevron-down" ></span></button>
+  <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal2" >Make Your A/C &nbsp<span class="glyphicon glyphicon-chevron-down" ></span></button>
 
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog" >
+  <div class="modal fade" id="myModal2" role="dialog" >
     <div class="modal-dialog">
     
       <!-- Modal content-->
