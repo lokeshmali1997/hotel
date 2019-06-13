@@ -21,16 +21,19 @@
     <script>
         function cardno()
         {
-       
+            
+           
+           
             var no = document.getElementById("txtcardnumber").value;
             var lengths = no.length;
-         
+            var value = no[0];
           
              if(no=="")
             {
-                document.getElementById("cardnoerror").innerHTML = " card no is empty";
+                 document.getElementById("cardnoerror").innerHTML = " card no is empty";
+
             }
-       else if(lengths<13||lengths>16)
+       else if(lengths!=16)
             {
                 document.getElementById("cardnoerror").innerHTML = "invalid card no";
           }
@@ -39,9 +42,14 @@
 
               document.getElementById("cardnoerror").innerHTML = "enter only number";
           }
+          else if(value!=4)
+          {
+              document.getElementById("cardnoerror").innerHTML = "invalid card no";
+          }
             else
             {
-                document.getElementById("cardnoerror").innerHTML = "";
+              document.getElementById("cardnoerror").innerHTML = "";
+              return false;
             } 
         }
         function cardname() {
@@ -84,11 +92,12 @@
             cardno();
             cardname();
             cvvno();
+            return false;
         }
     </script>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" onsubmit="return false;" runat="server">
     <div>
      <div class="container" style="border:1px solid grey; margin-top:5%; border-radius:3px;">
          <div style="margin:20px;">
@@ -163,7 +172,7 @@
                          <p>Rs: <asp:Label ID="lblprice" runat="server" Text="1000" style="color:red;font-size:30px;"></asp:Label></p>
                      </div>
                      <div class="col-md-6">
-                         <asp:Button ID="btnmakepayment" runat="server" Text="Make Payment" OnClientClick="paymentvalidate()" />
+                         <asp:Button ID="btnmakepayment" runat="server"  Text="Make Payment" OnClientClick="paymentvalidate()" />
                      </div>
                  </div>
              </div>

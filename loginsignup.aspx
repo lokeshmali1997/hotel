@@ -212,7 +212,7 @@
         </script>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1"  onsubmit="return false;" runat="server">
     <div class="container">
    <h2>Modal Example</h2>
   <!-- Trigger the modal with a button -->
@@ -280,15 +280,12 @@
         <div class="input-group">
                 <span class="input-group-addon"><i class="fas fa-user"></i></span>
             <asp:TextBox ID="loginemail" runat="server" placeholder="Enter Your Email" CssClass="form-control  textboxes"></asp:TextBox> 
-          <%--   <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Email is Empty" ControlToValidate="loginemail" ForeColor="Red"></asp:RequiredFieldValidator>
-          <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Invalid Email" ControlToValidate="loginemail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-          --%>    <div id="loginemailerror" class="errormsg"></div>
+            <div id="loginemailerror" class="errormsg"></div>
               </div>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fas fa-key"></i></span>
             <asp:TextBox ID="loginpass" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox> 
-           <%--   <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Password is Empty" ControlToValidate="loginpass" ForeColor="Red"></asp:RequiredFieldValidator>
-             --%> <div id="loginpasserror" class="errormsg"></div> 
+         <div id="loginpasserror" class="errormsg"></div> 
                  </div>
             <div class="input-group">
                 <asp:Button ID="btnlogin" runat="server" Text="Log In" CssClass="btn1" OnClientClick="loginvalidate()" />
