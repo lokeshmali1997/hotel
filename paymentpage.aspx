@@ -101,13 +101,13 @@
     <form id="form1" runat="server">
     
      <div class="container" style="border:none; margin-top:5%; border-radius:3px; box-shadow:4px 4px 8px silver; background-color:#333333;">
-         <div style="margin-top:5px; background-color:#333333;">
+         <div style="margin-top:5px;">
             
 
     
      
          <div style="margin-top:20px;">
-            <ul class="nav  nav-tabs">
+            <ul class="nav  nav-tabs" style="border:none;">
 
                 <li class="active"><a  data-toggle="tab" href="#Debitcard">Debitcard</a></li>
                 <li><a  data-toggle="tab" href="#Netbanking">Netbanking</a></li>
