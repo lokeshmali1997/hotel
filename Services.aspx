@@ -147,7 +147,7 @@
 				</div>
 			</div>
 				<!--GET IN TOUCH-->
-					<div class="touch-section">
+					<div class="touch-section" style="">
 					<div class="container">
 						<h3>get in touch</h3>
 						<div class="touch-grids">
