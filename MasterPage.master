@@ -57,9 +57,12 @@
 
         .textboxes{
             border:none;
+            border-bottom:1px solid black;
+            box-shadow: none;
+            margin-top:10px;
         }
         .textboxes:focus {
-            border-bottom: 1px solid grey;
+            border-bottom: 1px solid #00cc99;
             outline: none;
             box-shadow: none;
            
@@ -72,9 +75,9 @@
             background: #00cc99;
             border-radius: 3px;
             border: none;
-           
+           margin-left:10px;
             outline: none !important;
-           // width: 540px;
+            width: 680px;
             height: 35px;
         }
 
@@ -86,9 +89,15 @@
          
            
              color:red;
-            
+           }
+             #navsignup{
+                 font-size:18px;
 
-         }
+             }
+             #navlogin{
+                 font-size:18px;
+
+             }
     </style>
     <script>
         var returnval;
@@ -461,7 +470,7 @@
     
   </ul>
 
-  <div class="tab-content">
+  <div class="tab-content mod1">
     <div id="home" class="tab-pane fade in active" runat="server">
        <div class="row">
         <div class="col-md-12">
@@ -470,7 +479,7 @@
 
        </div>
              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-send"></i></span>
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
             <asp:TextBox ID="txtname" runat="server" placeholder="Enter Your Name" CssClass="form-control textboxes"></asp:TextBox> 
         <div id="nameerror" class="errormsg"></div>
                    </div>
@@ -484,7 +493,7 @@
                <div id="emailerror" class="errormsg"></div>
                  </div>
             <div class="input-group">
-                <span class="input-group-addon"><i class="fas fa-user"></i></span>
+                <span class="input-group-addon"><i class="fas fa-mobile"></i></span>
             <asp:TextBox ID="txtnumber" runat="server" placeholder="Enter Your Number" CssClass="form-control  textboxes"></asp:TextBox> 
             <div id="numbererror" class="errormsg"></div>
                  </div>
