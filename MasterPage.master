@@ -68,24 +68,25 @@
            
         }
 
-        .btn1 {
+        .btn1{
             color: white;
             font-size: 16px;
             font-weight: bold;
-            background: #00cc99;
+            background:linear-gradient(to right,#4db8ff ,#005c99);
             border-radius: 3px;
             border: none;
            margin-left:10px;
             outline: none !important;
             width: 680px;
             height: 35px;
+            
         }
 
-            .btn1:hover {
-                background-color: #009973;
+            .btn1:hover{
+               background:linear-gradient(to right,#44db8ff ,#115d99);
             }
 
-             .errormsg {
+             .errormsg{
          
            
              color:red;
@@ -96,7 +97,6 @@
              }
              #navlogin{
                  font-size:18px;
-
              }
 
 
@@ -250,19 +250,19 @@
                     <nav class="navbar ">
 
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
+                            <li class="active"><a href="index.aspx">Home</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="Rooms.aspx">Room</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Service
         <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Dining</a></li>
-                                    <li><a href="#">Guest Room</a></li>
-                                    <li><a href="#">Meeting</a></li>
-                                    <li><a href="#">Event</a></li>
-                                    <li><a href="#">Spa & Gym</a></li>
-                                    <li><a href="#">Pool</a></li>
+                                    <li><a href="Services.aspx">Dining</a></li>
+                                    <li><a href="Services.aspx">Guest Room</a></li>
+                                    <li><a href="Services.aspx">Meeting</a></li>
+                                    <li><a href="Services.aspx">Event</a></li>
+                                    <li><a href="Services.aspx">Spa & Gym</a></li>
+                                    <li><a href="Services.aspx">Pool</a></li>
                                 </ul>
                             </li>
                             <li><a href="gallery.aspx">Gallery</a></li>
@@ -275,9 +275,6 @@
                 </div>
                 <div class="col-sm-2 btnbook">
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Book Now</button>
-
-
-
                 </div>
             </div>
             <div style="margin-top: 150px">
