@@ -32,7 +32,7 @@
             z-index: -1;
             min-width: 100%;
             min-height: 100%;
-            margin-left: -51px;
+            margin-left: -15px;
         }
 
         .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
@@ -81,8 +81,17 @@
             .btn1:hover {
                 background-color: #009973;
             }
+
+             .errormsg {
+         
+           
+             color:red;
+            
+
+         }
     </style>
     <script>
+        var returnval;
         function name()
         {
             var name = document.getElementById("txtname").value;
@@ -97,6 +106,7 @@
             else
             {
                 document.getElementById("nameerror").innerHTML = "";
+                
             }
         }
         function email()
@@ -107,13 +117,13 @@
             var dotposition = email.dotposition;
             if (email == "") {
                 document.getElementById("emailerror").innerHTML = "email is Empty";
-
             }
             else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length) {
                 document.getElementById("emailerror").innerHTML = "email is not correct";
             }
             else {
                 document.getElementById("emailerror").innerHTML = "";
+                
             }
            
         }
@@ -126,6 +136,7 @@
             }
             else {
                 document.getElementById("passerror").innerHTML = "";
+                
             }
         }
         function conformpassword()
@@ -142,6 +153,7 @@
             }
             else {
                 document.getElementById("confpasserror").innerHTML = "";
+                
             }
         }
         function state()
@@ -153,6 +165,7 @@
             }
             else {
                 document.getElementById("stateerror").innerHTML = "";
+                
             }
         }
         function number()
@@ -169,19 +182,20 @@
             else if(isNaN(number))
             {
                 document.getElementById("numbererror").innerHTML = " enter number value only";
+
             }
             else {
                 document.getElementById("numbererror").innerHTML = "";
+                
             }
         }
         function validate() {
           
             name();
             email();
+            number();
             password();
             conformpassword();
-            state();
-            number();
         }
 
             function loginemail()
@@ -442,13 +456,13 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
          <ul class="nav nav-tabs" style="border-bottom:none;">
-    <li class="active"><a data-toggle="tab" href="#home" >Sign Up</a></li>
-    <li><a data-toggle="tab" href="#menu1">Login</a></li>
+    <li class="active" id="navsignup" runat="server"><a data-toggle="tab" href="#home" >Sign Up</a></li>
+    <li id="navlogin" runat="server"><a data-toggle="tab" href="#menu1">Login</a></li>
     
   </ul>
 
   <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
+    <div id="home" class="tab-pane fade in active" runat="server">
        <div class="row">
         <div class="col-md-12">
 
@@ -485,13 +499,13 @@
                                <div id="confpasserror" class="errormsg"></div>
                  </div>
             <div class="input-group">
-                <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1"  OnClientClick="validate()" />
+                <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1"  OnClientClick="return validate();" OnClick="btnsignup_Click" />
             </div>
             </div>
            
             
          </div>
-     <div id="menu1" class="tab-pane fade">
+     <div id="menu1" class="tab-pane fade" runat="server">
          <div class="row">
              <div class="col-md-12">
                  <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">LOGIN</h3>

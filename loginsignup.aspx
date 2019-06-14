@@ -81,12 +81,12 @@
              font-size: 20px;
          }
          .errormsg {
-            
+         
+           
              color:red;
             
 
          }
-        
     </style>
     <script>
         function name()
