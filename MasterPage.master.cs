@@ -18,6 +18,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
     protected void btnsignup_Click(object sender, EventArgs e)
     {
+        try
+        {
         DataFunction objdf = new DataFunction();
         SqlParameter[] param = new SqlParameter[4];
 
@@ -44,5 +46,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
             navsignup.Attributes.Remove("class");
             navsignup.Attributes.Add("class", "nav nav-tabs");
         }
+
+        }
+        catch(Exception ex)
+        {
+            Response.Write("<script> alert('Error occured, Try again later or contact to Admin.') </script>");   
+        }            
     }
 }
