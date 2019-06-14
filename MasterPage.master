@@ -32,7 +32,7 @@
             z-index: -1;
             min-width: 100%;
             min-height: 100%;
-            margin-left: -51px;
+            margin-left: -15px;
         }
 
         .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
@@ -77,6 +77,14 @@
             .btn1:hover {
                 background-color: #009973;
             }
+
+             .errormsg {
+         
+           
+             color:red;
+            
+
+         }
     </style>
     <script>
         function name()
@@ -85,14 +93,17 @@
            
             if (name == "") {
                 document.getElementById("nameerror").innerHTML = "Name is Empty";
+                return false;
             }
             else if(!isNaN(name))
             {
                 document.getElementById("nameerror").innerHTML = "Name is invalid";
+                return false;
             }
             else
             {
                 document.getElementById("nameerror").innerHTML = "";
+                return true;
             }
         }
         function email()
@@ -103,13 +114,15 @@
             var dotposition = email.dotposition;
             if (email == "") {
                 document.getElementById("emailerror").innerHTML = "email is Empty";
-
+                return false;
             }
             else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length) {
                 document.getElementById("emailerror").innerHTML = "email is not correct";
+                return false;
             }
             else {
                 document.getElementById("emailerror").innerHTML = "";
+                return true;
             }
            
         }
@@ -119,9 +132,11 @@
             if(password=="")
             {
                 document.getElementById("passerror").innerHTML = "password is Empty";
+                return false;
             }
             else {
                 document.getElementById("passerror").innerHTML = "";
+                return true;
             }
         }
         function conformpassword()
@@ -131,13 +146,16 @@
             if(confpass=="")
             {
                 document.getElementById("confpasserror").innerHTML = "confirm password is Empty";
+                return false;
             }
             else if(password!=confpass)
             {
                 document.getElementById("confpasserror").innerHTML = " password not match";
+                return false;
             }
             else {
                 document.getElementById("confpasserror").innerHTML = "";
+                return true;
             }
         }
         function state()
@@ -146,9 +164,11 @@
             if(state=="")
             {
                 document.getElementById("stateerror").innerHTML = " state is empty";
+                return false;
             }
             else {
                 document.getElementById("stateerror").innerHTML = "";
+                return true;
             }
         }
         function number()
@@ -157,17 +177,21 @@
             if(number=="")
             {
                 document.getElementById("numbererror").innerHTML = " number is empty";
+                return false;
             }
             else if(number.length!=10)
             {
                 document.getElementById("numbererror").innerHTML = " number is wrong";
+                return false;
             }
             else if(isNaN(number))
             {
                 document.getElementById("numbererror").innerHTML = " enter number value only";
+                return false;
             }
             else {
                 document.getElementById("numbererror").innerHTML = "";
+                return true;
             }
         }
         function validate() {
@@ -177,7 +201,7 @@
             password();
             conformpassword();
             state();
-            number();
+            return number();
         }
 
             function loginemail()
@@ -481,7 +505,7 @@
                                <div id="confpasserror" class="errormsg"></div>
                  </div>
             <div class="input-group">
-                <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1"  OnClientClick="validate()" />
+                <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1"  OnClientClick="return validate()" />
             </div>
             </div>
            
