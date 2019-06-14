@@ -55,10 +55,14 @@
             border-radius: 0px;
         }*/
 
+        .textboxes{
+            border:none;
+        }
         .textboxes:focus {
             border-bottom: 1px solid grey;
             outline: none;
             box-shadow: none;
+           
         }
 
         .btn1 {
@@ -68,9 +72,9 @@
             background: #00cc99;
             border-radius: 3px;
             border: none;
-            min-width: 140px;
+           
             outline: none !important;
-            width: 540px;
+           // width: 540px;
             height: 35px;
         }
 
@@ -264,7 +268,7 @@
                             </li>
                             <li><a href="gallery.aspx">Gallery</a></li>
                             <li><a href="#">Contact</a></li>
-                            <li><a href="#"  data-toggle="modal" data-target="#myModal2">Login</a></li>
+                            <li><a href="#"  data-toggle="modal" data-target="#myModal2" >Login</a></li>
                         </ul>
 
                     </nav>
@@ -448,7 +452,7 @@
     <div class="modal-dialog">
     
       <!-- Modal content-->
-      <div class="modal-content">
+      <div class="modal-content" style="width:120%">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
          <ul class="nav nav-tabs" style="border-bottom:none;">
@@ -462,7 +466,7 @@
        <div class="row">
         <div class="col-md-12">
 
-        <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">SIGN UP</h3>
+        <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left:280px;">SIGN UP</h3>
 
        </div>
              <div class="input-group">
