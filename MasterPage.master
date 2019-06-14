@@ -14,14 +14,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
 
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'/>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous' />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <style>
         .row {
             margin: 0px;
@@ -55,73 +55,73 @@
             border-radius: 0px;
         }*/
 
-        .textboxes{
-            border:none;
-            border-bottom:1px solid black;
+        .textboxes {
+            border: none;
+            border-bottom: 1px solid black;
             box-shadow: none;
-            margin-top:10px;
-        }
-        .textboxes:focus {
-            border-bottom: 1px solid #00cc99;
-            outline: none;
-            box-shadow: none;
-           
+            margin-top: 10px;
         }
 
-        .btn1{
+            .textboxes:focus {
+                border-bottom: 1px solid #00cc99;
+                outline: none;
+                box-shadow: none;
+            }
+
+        .btn1 {
             color: white;
             font-size: 16px;
             font-weight: bold;
-            background:linear-gradient(to right,#4db8ff ,#005c99);
+            background: linear-gradient(to right,#4db8ff,#005c99);
             border-radius: 3px;
             border: none;
-           margin-left:10px;
+            margin-left: 10px;
             outline: none !important;
             width: 680px;
             height: 35px;
-            
         }
 
-            .btn1:hover{
-               background:linear-gradient(to right,#44db8ff ,#115d99);
+            .btn1:hover {
+                background: linear-gradient(to right,#44db8ff,#115d99);
             }
 
-             .errormsg{
-         
-           
-             color:red;
-           }
-             #navsignup{
-                 font-size:18px;
+        .errormsg {
+            color: red;
+        }
 
-             }
-             #navlogin{
-                 font-size:18px;
-             }
+        #navsignup {
+            font-size: 18px;
+        }
 
-
+        #navlogin {
+            font-size: 18px;
+        }
     </style>
     <script>
-        function name()
-        {
+        $(document).ready(function () {
+            function wrongCredentials()
+            {
+
+            }
+        });
+    </script>
+    <script>
+        function name() {
 
             var name = document.getElementById("txtname").value;
             if (name == "") {
                 document.getElementById("nameerror").innerHTML = "Name is Empty";
             }
-            else if(!isNaN(name))
-            {
+            else if (!isNaN(name)) {
                 document.getElementById("nameerror").innerHTML = "Name is invalid";
             }
-            else
-            {
+            else {
                 document.getElementById("nameerror").innerHTML = "";
                 return true;
             }
         }
-        function email()
-        {
-           
+        function email() {
+
             var email = document.getElementById("txtemail").value;
             var atposition = email.indexOf("@");
             var dotposition = email.dotposition;
@@ -135,13 +135,11 @@
                 document.getElementById("emailerror").innerHTML = "";
                 return true;
             }
-           
+
         }
-        function password()
-        {
+        function password() {
             var password = document.getElementById("password").value;
-            if(password=="")
-            {
+            if (password == "") {
                 document.getElementById("passerror").innerHTML = "password is Empty";
             }
             else {
@@ -149,16 +147,13 @@
                 return true;
             }
         }
-        function conformpassword()
-        {
+        function conformpassword() {
             var password = document.getElementById("password").value;
             var confpass = document.getElementById("passwordconfirm").value;
-            if(confpass=="")
-            {
+            if (confpass == "") {
                 document.getElementById("confpasserror").innerHTML = "confirm password is Empty";
             }
-            else if(password!=confpass)
-            {
+            else if (password != confpass) {
                 document.getElementById("confpasserror").innerHTML = " password not match";
             }
             else {
@@ -167,19 +162,15 @@
             }
         }
 
-        function number()
-        {
+        function number() {
             var number = document.getElementById("txtnumber").value;
-            if(number=="")
-            {
+            if (number == "") {
                 document.getElementById("numbererror").innerHTML = " number is empty";
             }
-            else if(number.length!=10)
-            {
+            else if (number.length != 10) {
                 document.getElementById("numbererror").innerHTML = " number is wrong";
             }
-            else if(isNaN(number))
-            {
+            else if (isNaN(number)) {
                 document.getElementById("numbererror").innerHTML = " enter number value only";
 
             }
@@ -189,14 +180,13 @@
             }
         }
         function validate() {
-          
+
             name();
             email();
             number();
             password();
-            conformpassword();                
-            if(name() && email() && number() && password() && conformpassword())
-            {
+            conformpassword();
+            if (name() && email() && number() && password() && conformpassword()) {
                 return true;
             }
             else {
@@ -204,9 +194,8 @@
             }
         }
 
-            function loginemail()
-        {
-           
+        function loginemail() {
+
             var loginemail = document.getElementById("loginemail").value;
             var atposition = loginemail.indexOf("@");
             var dotposition = loginemail.dotposition;
@@ -219,29 +208,36 @@
             }
             else {
                 document.getElementById("loginemailerror").innerHTML = "";
+                return true;
             }
-           
+
         }
-        function loginpassword()
-        {
+        function loginpassword() {
             var loginpassword = document.getElementById("loginpass").value;
-            if(loginpassword=="")
-            {
+            if (loginpassword == "") {
                 document.getElementById("loginpasserror").innerHTML = "password is Empty";
             }
             else {
                 document.getElementById("loginpasserror").innerHTML = "";
+                return true;
             }
         }
-            function loginvalidate() {
-          
+        function loginvalidate() {
             loginemail();
             loginpassword();
-            
-        }
-        
 
-        </script>
+            if(loginemail() && loginpassword())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+    </script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -274,7 +270,7 @@
                             </li>
                             <li><a href="gallery.aspx">Gallery</a></li>
                             <li><a href="#">Contact</a></li>
-                            <li><a href="#"  data-toggle="modal" data-target="#myModal2" >Login</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal2">Login</a></li>
                         </ul>
 
                     </nav>
@@ -289,7 +285,7 @@
                 </asp:ContentPlaceHolder>
             </div>
 
-            <div class="footer" style="margin-bottom: 0px; padding-top:1em">
+            <div class="footer" style="margin-bottom: 0px; padding-top: 1em">
                 <div class="row footer-header" style="margin-left: 80px; margin-right: 80px;">
                     <div class="col-sm-3">
                         <h3 style="margin-left: 38px;">The Unique Hotel</h3>
@@ -438,7 +434,7 @@
                                     <span style="font-style: oblique">Check Availebility</span>
                                 </div>
                                 <div class="col-md-6">
-                                    <asp:Button ID="Search" runat="server" Text="Search" CssClass="searchbtn" PostBackUrl="~/Rooms.aspx"/>
+                                    <asp:Button ID="Search" runat="server" Text="Search" CssClass="searchbtn" PostBackUrl="~/Rooms.aspx" />
                                 </div>
                             </div>
                         </div>
@@ -447,113 +443,108 @@
             </div>
         </div>
         <div class="container">
-     <!-- Trigger the modal with a button -->
-  
+            <!-- Trigger the modal with a button -->
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal2" role="dialog" >
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content" style="width:120%">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-         <ul class="nav nav-tabs" style="border-bottom:none;">
-    <li class="active" id="navsignup" runat="server"><a data-toggle="tab" href="#home" >Sign Up</a></li>
-    <li id="navlogin" runat="server"><a data-toggle="tab" href="#menu1">Login</a></li>
-    
-  </ul>
 
-  <div class="tab-content mod1">
-    <div id="home" class="tab-pane fade in active" runat="server">
-       <div class="row">
-        <div class="col-md-12">
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog">
 
-        <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left:280px;">SIGN UP</h3>
+                    <!-- Modal content-->
+                    <div class="modal-content" style="width: 120%">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <ul class="nav nav-tabs" style="border-bottom: none;">
+                                <li class="active" id="navlogin" runat="server"><a data-toggle="tab" href="#menu1">Login</a></li>
+                                <li id="navsignup" runat="server"><a data-toggle="tab" href="#home">Sign Up</a></li>
+                            </ul>
 
-       </div>
-             <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-            <asp:TextBox ID="txtname" runat="server" placeholder="Enter Your Name" CssClass="form-control textboxes"></asp:TextBox> 
-        <div id="nameerror" class="errormsg"></div>
-                   </div>
-        
-            
-            
+                            <div class="tab-content mod1">
+                                <div id="menu1" class="tab-pane fade in active" runat="server">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">LOGIN</h3>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-user"></i></span>
+                                            <asp:TextBox ID="loginemail" runat="server" placeholder="Enter Your Email or Number" CssClass="form-control  textboxes"></asp:TextBox>
+                                            <div id="loginemailerror" class="errormsg"></div>
+                                        </div>
+                                        <div class="input-group" style="margin-bottom: 20px;">
+                                            <span class="input-group-addon"><i class="fas fa-key"></i></span>
+                                            <asp:TextBox ID="loginpass" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox>
+                                            <div id="loginpasserror" class="errormsg"></div>
+                                        </div>
+                                        <asp:Button ID="btnlogin" runat="server" Text="Log In" CssClass="btn1" OnClientClick="loginvalidate()" OnClick="btnlogin_Click" />
+                                        <span id="spnwrongdeatils"> </span>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <a href="#">Forget Password ?</a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a href="#" style="margin-left: 130px;">Reset Password</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="home" class="tab-pane fade" runat="server">
+                                            <div class="row">
+                                                <div class="col-md-12">
 
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-send"></i></span>
-            <asp:TextBox ID="txtemail" runat="server" placeholder="Enter Your Email" CssClass="form-control textboxes"></asp:TextBox> 
-               <div id="emailerror" class="errormsg"></div>
-                 </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fas fa-mobile"></i></span>
-            <asp:TextBox ID="txtnumber" runat="server" placeholder="Enter Your Number" CssClass="form-control  textboxes"></asp:TextBox> 
-            <div id="numbererror" class="errormsg"></div>
-                 </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fas fa-key"></i></span>
-            <asp:TextBox ID="password" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox> 
-                           <div id="passerror" class="errormsg"></div>
-                  </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fas fa-key"></i></span>
-            <asp:TextBox ID="passwordconfirm" runat="server" placeholder="Confirm Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox> 
-                               <div id="confpasserror" class="errormsg"></div>
-                 </div>
-            <div class="input-group">
-                <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1" OnClick="btnsignup_Click" OnClientClick="return validate()"/>
-            </div>
-            </div>
-           
-            
-         </div>
-     <div id="menu1" class="tab-pane fade" runat="server">
-         <div class="row">
-             <div class="col-md-12">
-                 <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">LOGIN</h3>
-              </div>          
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fas fa-user"></i></span>
-            <asp:TextBox ID="loginemail" runat="server" placeholder="Enter Your Email" CssClass="form-control  textboxes"></asp:TextBox> 
-            <div id="loginemailerror" class="errormsg"></div>
-              </div>
-            <div class="input-group" style="margin-bottom:20px;">
-                <span class="input-group-addon"><i class="fas fa-key"></i></span>
-            <asp:TextBox ID="loginpass" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox> 
-         <div id="loginpasserror" class="errormsg"></div> 
-                 </div>
-    <asp:Button ID="btnlogin" runat="server" Text="Log In" CssClass="btn1" OnClientClick="loginvalidate()" />
-         
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="#">Forget Password ?</a>
+                                                    <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-left: 280px;">SIGN UP</h3>
+
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                    <asp:TextBox ID="txtname" runat="server" placeholder="Enter Your Name" CssClass="form-control textboxes"></asp:TextBox>
+                                                    <div id="nameerror" class="errormsg"></div>
+                                                </div>
+
+
+
+
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-send"></i></span>
+                                                    <asp:TextBox ID="txtemail" runat="server" placeholder="Enter Your Email" CssClass="form-control textboxes"></asp:TextBox>
+                                                    <div id="emailerror" class="errormsg"></div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fas fa-mobile"></i></span>
+                                                    <asp:TextBox ID="txtnumber" runat="server" placeholder="Enter Your Number" CssClass="form-control  textboxes"></asp:TextBox>
+                                                    <div id="numbererror" class="errormsg"></div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fas fa-key"></i></span>
+                                                    <asp:TextBox ID="password" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox>
+                                                    <div id="passerror" class="errormsg"></div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fas fa-key"></i></span>
+                                                    <asp:TextBox ID="passwordconfirm" runat="server" placeholder="Confirm Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox>
+                                                    <div id="confpasserror" class="errormsg"></div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1" OnClick="btnsignup_Click" OnClientClick="return validate()" />
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                         
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="col-md-6">
-                    <a href="#" style="margin-left:130px;">Reset Password</a>
-                </div>
             </div>
-    
-             
-         </div>
 
-    
-    </div>
-    
 
-                          
         </div>
- 
-
-  </div>      
-       
-        </div>
-      
-    </div>
-  </div>
-
-  
-</div>
     </form>
 </body>
 </html>
