@@ -184,10 +184,12 @@
           
             name();
             email();
+            number();
+           // state();
             password();
             conformpassword();
-            state();
-            number();
+            
+          
         }
 
             function loginemail()
