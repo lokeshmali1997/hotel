@@ -195,7 +195,7 @@
             number();
             password();
             conformpassword();                
-            if(name() && email() && email() && number() && password() && conformpassword())
+            if(name() && email() && number() && password() && conformpassword())
             {
                 return true;
             }
