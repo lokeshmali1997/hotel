@@ -241,7 +241,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" onsubmit="return false;" runat="server">
 
         <div class="main-wrapper">
             <div class="row header nav navbar-fixed-top">
