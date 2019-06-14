@@ -102,7 +102,6 @@
 
     </style>
     <script>
-        var returnval;
         function name()
         {
             var name = document.getElementById("txtname").value;
@@ -167,18 +166,7 @@
                 
             }
         }
-        function state()
-        {
-            var state = document.getElementById("txtaddress").value;
-            if(state=="")
-            {
-                document.getElementById("stateerror").innerHTML = " state is empty";
-            }
-            else {
-                document.getElementById("stateerror").innerHTML = "";
-                
-            }
-        }
+
         function number()
         {
             var number = document.getElementById("txtnumber").value;
@@ -206,7 +194,7 @@
             email();
             number();
             password();
-            conformpassword();
+            conformpassword();                
         }
 
             function loginemail()
@@ -510,7 +498,7 @@
                                <div id="confpasserror" class="errormsg"></div>
                  </div>
             <div class="input-group">
-                <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1"  OnClientClick="return validate();" OnClick="btnsignup_Click" />
+                <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1" OnClick="btnsignup_Click" OnClientClick="return validate()"/>
             </div>
             </div>
            
