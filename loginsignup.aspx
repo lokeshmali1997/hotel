@@ -61,6 +61,7 @@
                   outline: none !important;
                   width:540px;
                   height:35px;
+                  margin-left:10px;
          }
         .btn1:hover {
                     background-color:#009973;        
@@ -183,10 +184,12 @@
           
             name();
             email();
+            number();
+           // state();
             password();
             conformpassword();
-            state();
-            number();
+            
+          
         }
 
             function loginemail()

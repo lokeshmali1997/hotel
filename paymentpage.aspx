@@ -49,7 +49,7 @@
             else
             {
               document.getElementById("cardnoerror").innerHTML = "";
-              return false;
+              
             } 
         }
         function cardname() {
@@ -92,13 +92,13 @@
             cardno();
             cardname();
             cvvno();
-            return false;
+            
         }
     </script>
 </head>
 <body>
 
-    <form id="form1" runat="server">
+    <form id="form1" onsubmit="return false;" runat="server">
     
      <div class="container" style="border:none; margin-top:5%; border-radius:3px; box-shadow:4px 4px 8px silver; background-color:#333333;">
          <div style="margin-top:5px;">

@@ -55,10 +55,17 @@
             border-radius: 0px;
         }*/
 
+        .textboxes{
+            border:none;
+            border-bottom:1px solid black;
+            box-shadow: none;
+            margin-top:10px;
+        }
         .textboxes:focus {
-            border-bottom: 1px solid grey;
+            border-bottom: 1px solid #00cc99;
             outline: none;
             box-shadow: none;
+           
         }
 
         .btn1 {
@@ -68,9 +75,9 @@
             background: #00cc99;
             border-radius: 3px;
             border: none;
-            min-width: 140px;
+           margin-left:10px;
             outline: none !important;
-            width: 540px;
+            width: 680px;
             height: 35px;
         }
 
@@ -82,9 +89,15 @@
          
            
              color:red;
-            
+           }
+             #navsignup{
+                 font-size:18px;
 
-         }
+             }
+             #navlogin{
+                 font-size:18px;
+
+             }
     </style>
     <script>
         var returnval;
@@ -264,7 +277,7 @@
                             </li>
                             <li><a href="gallery.aspx">Gallery</a></li>
                             <li><a href="#">Contact</a></li>
-                            <li><a href="#"  data-toggle="modal" data-target="#myModal2">Login</a></li>
+                            <li><a href="#"  data-toggle="modal" data-target="#myModal2" >Login</a></li>
                         </ul>
 
                     </nav>
@@ -448,7 +461,7 @@
     <div class="modal-dialog">
     
       <!-- Modal content-->
-      <div class="modal-content">
+      <div class="modal-content" style="width:120%">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
          <ul class="nav nav-tabs" style="border-bottom:none;">
@@ -457,16 +470,16 @@
     
   </ul>
 
-  <div class="tab-content">
+  <div class="tab-content mod1">
     <div id="home" class="tab-pane fade in active" runat="server">
        <div class="row">
         <div class="col-md-12">
 
-        <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">SIGN UP</h3>
+        <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left:280px;">SIGN UP</h3>
 
        </div>
              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-send"></i></span>
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
             <asp:TextBox ID="txtname" runat="server" placeholder="Enter Your Name" CssClass="form-control textboxes"></asp:TextBox> 
         <div id="nameerror" class="errormsg"></div>
                    </div>
@@ -480,7 +493,7 @@
                <div id="emailerror" class="errormsg"></div>
                  </div>
             <div class="input-group">
-                <span class="input-group-addon"><i class="fas fa-user"></i></span>
+                <span class="input-group-addon"><i class="fas fa-mobile"></i></span>
             <asp:TextBox ID="txtnumber" runat="server" placeholder="Enter Your Number" CssClass="form-control  textboxes"></asp:TextBox> 
             <div id="numbererror" class="errormsg"></div>
                  </div>
