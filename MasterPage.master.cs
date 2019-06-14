@@ -45,6 +45,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
             home.Attributes.Add("class", "tab-pane");
             navsignup.Attributes.Remove("class");
             navsignup.Attributes.Add("class", "nav nav-tabs");
+
+            txtname.Text = "";
+            txtnumber.Text = "";
+            txtemail.Text = "";
+   
         }
 
         }
