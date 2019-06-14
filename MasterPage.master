@@ -104,8 +104,8 @@
     <script>
         function name()
         {
+
             var name = document.getElementById("txtname").value;
-           
             if (name == "") {
                 document.getElementById("nameerror").innerHTML = "Name is Empty";
             }
@@ -116,7 +116,7 @@
             else
             {
                 document.getElementById("nameerror").innerHTML = "";
-                
+                return true;
             }
         }
         function email()
@@ -133,7 +133,7 @@
             }
             else {
                 document.getElementById("emailerror").innerHTML = "";
-                
+                return true;
             }
            
         }
@@ -146,7 +146,7 @@
             }
             else {
                 document.getElementById("passerror").innerHTML = "";
-                
+                return true;
             }
         }
         function conformpassword()
@@ -163,7 +163,7 @@
             }
             else {
                 document.getElementById("confpasserror").innerHTML = "";
-                
+                return true;
             }
         }
 
@@ -185,7 +185,7 @@
             }
             else {
                 document.getElementById("numbererror").innerHTML = "";
-                
+                return true;
             }
         }
         function validate() {
@@ -240,7 +240,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" onsubmit="return false;" runat="server">
+    <form id="form1" runat="server">
 
         <div class="main-wrapper">
             <div class="row header nav navbar-fixed-top">
