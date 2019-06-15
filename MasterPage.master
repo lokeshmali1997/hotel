@@ -521,11 +521,6 @@
         </div>
         <div class="container">
             <!-- Trigger the modal with a button -->
-
-            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                    <ContentTemplate>
-                
             <!-- Modal -->
             <div class="modal fade" id="myModal2" role="dialog">
                 <div class="modal-dialog">
@@ -614,8 +609,6 @@
                 </div>
                      
             </div>
-                           </ContentTemplate>
-                    </asp:UpdatePanel>
         </div>
     </form>
 </body>
