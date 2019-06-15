@@ -98,20 +98,20 @@
         }
                 .signinbtn {
    
-   // color: #000;
+    color: #000;
     padding: 16px;
-    //font-size: 16px;
+    font-size: 16px;
     border: none;
-   // cursor: pointer;
+   cursor: pointer;
 	text-decoration:none;
 }
 .dropdown-signin {
     position: relative;
     display: inline-block;
-	margin:0px 0px 0px 0px;
+	margin:12px 0px 0px 0px;
           cursor:pointer;
-		//  font-size:16px;
-		 // font-family:verdana;
+		 font-size:16px;
+		 font-family:verdana;
 		  
 }
 
@@ -121,7 +121,7 @@
     background-color: #f9f9f9;
     width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 2;
+    z-index: 1;
 	margin:10px 0px 0px 10px;
 }
 
@@ -141,8 +141,10 @@
 
 .dropdown-signin:hover .signinbtn {
     background-color: ;
+    text-decoration:none;
 	
 }
+        
     </style>
     <script>
         $(document).ready(function () {
@@ -295,11 +297,11 @@
         <div class="main-wrapper">
             <div class="row header nav navbar-fixed-top">
                 <div class="col-sm-3 logo"><span class="logo-name">The Unique Hotel</span></div>
-                <div class="col-sm-7 nav-bar">
+                <div class="col-sm-9 nav-bar">
 
                     <nav class="navbar ">
 
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav" style="    margin-left: -40px;">
                             <li class="active"><a href="index.aspx">Home</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="Rooms.aspx">Room</a></li>
@@ -317,8 +319,10 @@
                             </li>
                             <li><a href="gallery.aspx">Gallery</a></li>
                             <li><a href="#">Contact</a></li>
-                            <li class="dropdown-signin">  
-       <a href="#" data-toggle="modal" data-target="#myModal2" class="signinbtn">Login</a>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal2">Login</a></li>
+                            <li >
+                         <div class="dropdown-signin">       
+       <a href="#" class="signinbtn">Hi Lokesh</a>
          <div class="dropdown-signin-content">
            <a href="#">My Account</a>
            <a href="#">My Order</a>
@@ -326,16 +330,17 @@
 	       <a href="#">My Feedback</a>
              <a href="#">Logout</a>
        </div>  
-      
-                 </li>         
+      </div>
+                            </li>
+                            <li style="margin-left:90px"><div class="btnbook"> <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Book Now</button></div></li>     
                         </ul>
+                   
 
                     </nav>
 
+
                 </div>
-                <div class="col-sm-2 btnbook">
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Book Now</button>
-                </div>
+                
             </div>
             <div style="margin-top: 150px">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
