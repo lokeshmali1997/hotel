@@ -148,7 +148,20 @@
     </style>
     <script>
         $(document).ready(function () {
-           // $("#divAccount").hide();
+            $("#divAccount").hide();
+            $("#spnwrongdetails").hide();
+
+            function wrongCredential()
+            {
+                $("#spnwrongdetails").show();
+            }
+
+            function loginSuccess()
+            {
+                $("#myModal2").hide();
+                $("#loginLI").hide();
+                $("#divAccount").show();
+            }
         });
     </script>
     <script>
@@ -314,10 +327,12 @@
                             </li>
                             <li><a href="gallery.aspx">Gallery</a></li>
                             <li><a href="#">Contact</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#myModal2">Login</a></li>
+                            <li id="loginLI" runat="server"><a href="#" data-toggle="modal" data-target="#myModal2">Login</a></li>
                             <li>
-                                <div class="dropdown-signin" id="divAccount" style="display:none;">
-                                    <a href="#" class="signinbtn">Hi Lokesh</a>
+                                <div class="dropdown-signin" id="divAccount" runat="server" style="display:none;">
+                                    <a href="#" class="signinbtn">
+                                        Hi <asp:Label ID="lblAccount" runat="server" Text="Label"></asp:Label>
+                                        </a>
                                     <div class="dropdown-signin-content">
                                         <a href="#">My Account</a>
                                         <a href="#">My Order</a>
@@ -327,7 +342,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li style="margin-left: 90px">
+                            <li style="margin-left: 50px">
                                 <div class="btnbook">
                                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Book Now</button></div>
                             </li>
@@ -435,6 +450,7 @@
         </div>
         <div class="container">
             <!-- Modal -->
+
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
 
@@ -505,7 +521,10 @@
         <div class="container">
             <!-- Trigger the modal with a button -->
 
-
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                
             <!-- Modal -->
             <div class="modal fade" id="myModal2" role="dialog">
                 <div class="modal-dialog">
@@ -535,8 +554,8 @@
                                             <asp:TextBox ID="loginpass" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox>
                                             <div id="loginpasserror" class="errormsg"></div>
                                         </div>
-                                        <asp:Button ID="btnlogin" runat="server" Text="Log In" CssClass="btn1" OnClientClick="loginvalidate()" OnClick="btnlogin_Click" />
-                                        <span id="spnwrongdeatils"></span>
+                                        <asp:Button ID="btnlogin" runat="server" Text="Log In" CssClass="btn1" OnClientClick="return loginvalidate()" OnClick="btnlogin_Click" />
+                                        <span id="spnwrongdetails" class="errormsg"> Wrong Email or Password. </span>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <a href="#">Forget Password ?</a>
@@ -592,7 +611,10 @@
                         </div>
                     </div>
                 </div>
+                     
             </div>
+                           </ContentTemplate>
+                    </asp:UpdatePanel>
         </div>
     </form>
 </body>

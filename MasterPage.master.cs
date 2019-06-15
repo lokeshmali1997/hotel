@@ -13,7 +13,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if(Session["CustomerSession"] != null)
+        {
+            
+        }
     }
 
     protected void btnsignup_Click(object sender, EventArgs e)
@@ -91,13 +94,18 @@ public partial class MasterPage : System.Web.UI.MasterPage
         if(ds.Tables[0].Rows.Count>0)
         {
             Session["CustomerSession"] = ds.Tables[0].Rows[0]["customerId"];
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "loginSuccess();", true);
+            //            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "HidePopup", "loginSuccess();", true);
+            loginLI.Visible = false;
+            divAccount.Visible = true;
+            Response.Redirect("index.aspx");
         }
         else
         {
-            Response.Write("<script> alert('Wrong Credentials, Try Again!') </script>");
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "wrongCredential();", true);
         }
 
-        loginemail.Text = "";
-        loginpass.Text = "";
+        loginemail.Text = String.Empty;
+        loginpass.Text = String.Empty;
     }
 }
