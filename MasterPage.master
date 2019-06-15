@@ -513,6 +513,10 @@
 >>>>>>> parent of 9f97aea... commit
 =======
 
+<<<<<<< HEAD
+>>>>>>> parent of 9f97aea... commit
+=======
+
 >>>>>>> parent of 9f97aea... commit
             <!-- Modal -->
             <div class="modal fade" id="myModal2" role="dialog">
@@ -545,10 +549,13 @@
                                         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <asp:Button ID="btnlogin" runat="server" Text="Log In" CssClass="btn1" OnClientClick="return loginvalidate()" OnClick="btnlogin_Click" />
                                         <span id="spnwrongdetails" class="errormsg"> Wrong Email or Password. </span>
                                         <div class="row" style="margin-top:30px;">
 =======
+=======
+>>>>>>> parent of 9f97aea... commit
 =======
 >>>>>>> parent of 9f97aea... commit
                                         <asp:Button ID="btnlogin" runat="server" Text="Log In" CssClass="btn1" OnClientClick="loginvalidate()" OnClick="btnlogin_Click" />
