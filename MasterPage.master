@@ -96,62 +96,59 @@
         #navlogin {
             font-size: 18px;
         }
-                .signinbtn {
-   
-    color: #000;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-   cursor: pointer;
-	text-decoration:none;
-}
-.dropdown-signin {
-    position: relative;
-    display: inline-block;
-	margin:12px 0px 0px 0px;
-          cursor:pointer;
-		 font-size:16px;
-		 font-family:verdana;
-		  
-}
 
-.dropdown-signin-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-	margin:10px 0px 0px 10px;
-}
+        .signinbtn {
+            color: #000;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
 
-.dropdown-signin-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size:16px;
-}
+        .dropdown-signin {
+            position: relative;
+            display: inline-block;
+            margin: 12px 0px 0px 0px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: verdana;
+        }
 
-.dropdown-signin-content a:hover {background-color: #f1f1f1}
+        .dropdown-signin-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin: 10px 0px 0px 10px;
+        }
 
-.dropdown-signin:hover .dropdown-signin-content {
-    display: block;
-}
+            .dropdown-signin-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                font-size: 16px;
+            }
 
-.dropdown-signin:hover .signinbtn {
-    background-color: ;
-    text-decoration:none;
-	
-}
-        
+                .dropdown-signin-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+        .dropdown-signin:hover .dropdown-signin-content {
+            display: block;
+        }
+
+        .dropdown-signin:hover .signinbtn {
+            background-color:;
+            text-decoration: none;
+        }
     </style>
     <script>
         $(document).ready(function () {
-            function wrongCredentials()
-            {
-
-            }
+           // $("#divAccount").hide();
         });
     </script>
     <script>
@@ -275,12 +272,10 @@
             loginemail();
             loginpassword();
 
-            if(loginemail() && loginpassword())
-            {
+            if (loginemail() && loginpassword()) {
                 return true;
             }
-            else
-            {
+            else {
                 return false;
             }
         }
@@ -301,7 +296,7 @@
 
                     <nav class="navbar ">
 
-                        <ul class="nav navbar-nav" style="    margin-left: -40px;">
+                        <ul class="nav navbar-nav" style="margin-left: -40px;">
                             <li class="active"><a href="index.aspx">Home</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="Rooms.aspx">Room</a></li>
@@ -320,27 +315,30 @@
                             <li><a href="gallery.aspx">Gallery</a></li>
                             <li><a href="#">Contact</a></li>
                             <li><a href="#" data-toggle="modal" data-target="#myModal2">Login</a></li>
-                            <li >
-                         <div class="dropdown-signin">       
-       <a href="#" class="signinbtn">Hi Lokesh</a>
-         <div class="dropdown-signin-content">
-           <a href="#">My Account</a>
-           <a href="#">My Order</a>
-           <a href="#">My Returns</a>
-	       <a href="#">My Feedback</a>
-             <a href="#">Logout</a>
-       </div>  
-      </div>
+                            <li>
+                                <div class="dropdown-signin" id="divAccount" style="display:none;">
+                                    <a href="#" class="signinbtn">Hi Lokesh</a>
+                                    <div class="dropdown-signin-content">
+                                        <a href="#">My Account</a>
+                                        <a href="#">My Order</a>
+                                        <a href="#">My Returns</a>
+                                        <a href="#">My Feedback</a>
+                                        <a href="#">Logout</a>
+                                    </div>
+                                </div>
                             </li>
-                            <li style="margin-left:90px"><div class="btnbook"> <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Book Now</button></div></li>     
+                            <li style="margin-left: 90px">
+                                <div class="btnbook">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Book Now</button></div>
+                            </li>
                         </ul>
-                   
+
 
                     </nav>
 
 
                 </div>
-                
+
             </div>
             <div style="margin-top: 150px">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -538,7 +536,7 @@
                                             <div id="loginpasserror" class="errormsg"></div>
                                         </div>
                                         <asp:Button ID="btnlogin" runat="server" Text="Log In" CssClass="btn1" OnClientClick="loginvalidate()" OnClick="btnlogin_Click" />
-                                        <span id="spnwrongdeatils"> </span>
+                                        <span id="spnwrongdeatils"></span>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <a href="#">Forget Password ?</a>
@@ -550,62 +548,51 @@
                                     </div>
                                 </div>
                                 <div id="home" class="tab-pane fade" runat="server">
-                                            <div class="row">
-                                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-12">
 
-                                                    <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-left: 280px;">SIGN UP</h3>
-
-                                                </div>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                                    <asp:TextBox ID="txtname" runat="server" placeholder="Enter Your Name" CssClass="form-control textboxes"></asp:TextBox>
-                                                    <div id="nameerror" class="errormsg"></div>
-                                                </div>
-
-
-
-
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"><i class="fa fa-send"></i></span>
-                                                    <asp:TextBox ID="txtemail" runat="server" placeholder="Enter Your Email" CssClass="form-control textboxes"></asp:TextBox>
-                                                    <div id="emailerror" class="errormsg"></div>
-                                                </div>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"><i class="fas fa-mobile"></i></span>
-                                                    <asp:TextBox ID="txtnumber" runat="server" placeholder="Enter Your Number" CssClass="form-control  textboxes"></asp:TextBox>
-                                                    <div id="numbererror" class="errormsg"></div>
-                                                </div>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"><i class="fas fa-key"></i></span>
-                                                    <asp:TextBox ID="password" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox>
-                                                    <div id="passerror" class="errormsg"></div>
-                                                </div>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"><i class="fas fa-key"></i></span>
-                                                    <asp:TextBox ID="passwordconfirm" runat="server" placeholder="Confirm Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox>
-                                                    <div id="confpasserror" class="errormsg"></div>
-                                                </div>
-                                                <div class="input-group">
-                                                    <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1" OnClick="btnsignup_Click" OnClientClick="return validate()" />
-                                                </div>
-                                            </div>
-
+                                            <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-left: 280px;">SIGN UP</h3>
 
                                         </div>
-                         
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                            <asp:TextBox ID="txtname" runat="server" placeholder="Enter Your Name" CssClass="form-control textboxes"></asp:TextBox>
+                                            <div id="nameerror" class="errormsg"></div>
+                                        </div>
 
 
+
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-send"></i></span>
+                                            <asp:TextBox ID="txtemail" runat="server" placeholder="Enter Your Email" CssClass="form-control textboxes"></asp:TextBox>
+                                            <div id="emailerror" class="errormsg"></div>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-mobile"></i></span>
+                                            <asp:TextBox ID="txtnumber" runat="server" placeholder="Enter Your Number" CssClass="form-control  textboxes"></asp:TextBox>
+                                            <div id="numbererror" class="errormsg"></div>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-key"></i></span>
+                                            <asp:TextBox ID="password" runat="server" placeholder="Enter Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox>
+                                            <div id="passerror" class="errormsg"></div>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-key"></i></span>
+                                            <asp:TextBox ID="passwordconfirm" runat="server" placeholder="Confirm Your password" CssClass="form-control  textboxes" TextMode="Password"></asp:TextBox>
+                                            <div id="confpasserror" class="errormsg"></div>
+                                        </div>
+                                        <div class="input-group">
+                                            <asp:Button ID="btnsignup" runat="server" Text="Sign Up" CssClass="btn1" OnClick="btnsignup_Click" OnClientClick="return validate()" />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-
                         </div>
-
                     </div>
-
                 </div>
             </div>
-
-
         </div>
     </form>
 </body>
