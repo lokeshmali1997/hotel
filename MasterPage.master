@@ -63,7 +63,7 @@
         }
 
             .textboxes:focus {
-                border-bottom: 1px solid #00cc99;
+                border-bottom: 1px solid linear-gradient(to right,#4db8ff,#005c99);
                 outline: none;
                 box-shadow: none;
             }
@@ -75,6 +75,7 @@
             background: linear-gradient(to right,#4db8ff,#005c99);
             border-radius: 3px;
             border: none;
+            margin-top:10px;
             margin-left: 10px;
             outline: none !important;
             width: 680px;
@@ -542,7 +543,7 @@
                                 <div id="menu1" class="tab-pane fade in active" runat="server">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">LOGIN</h3>
+                                            <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left: 280px;margin-bottom:20px">LOGIN</h3>
                                         </div>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fas fa-user"></i></span>
@@ -556,12 +557,12 @@
                                         </div>
                                         <asp:Button ID="btnlogin" runat="server" Text="Log In" CssClass="btn1" OnClientClick="return loginvalidate()" OnClick="btnlogin_Click" />
                                         <span id="spnwrongdetails" class="errormsg"> Wrong Email or Password. </span>
-                                        <div class="row">
+                                        <div class="row" style="margin-top:30px;">
                                             <div class="col-md-6">
-                                                <a href="#">Forget Password ?</a>
+                                                <a href="#"  style="text-decoration:none">Forget Password ?</a>
                                             </div>
                                             <div class="col-md-6">
-                                                <a href="#" style="margin-left: 130px;">Reset Password</a>
+                                                <a href="#" style="margin-left: 212px;text-decoration:none">Reset Password</a>
                                             </div>
                                         </div>
                                     </div>
