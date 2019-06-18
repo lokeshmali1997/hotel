@@ -86,13 +86,44 @@
                 document.getElementById("cardnoerror").innerHTML = "";
             }
         }
+        function month()
+        {
+            var month = ddlmonth.options[ddlmonth.selectedIndex].innerHTML;
+           
+            if(month=="")
+            {
+                document.getElementById("montherror").innerHTML = "month is empty";
+            }
+            else if(isNaN(month)){
+                document.getElementById("montherror").innerHTML = "month is not valid";
+            }
+            else {
+                document.getElementById("montherror").innerHTML = "";
+            }
+
+        }
+        function year() {
+            var year = ddlyear.options[ddlyear.selectedIndex].innerHTML;
+
+            if (year == "") {
+                document.getElementById("yearerror").innerHTML = "year is empty";
+            }
+            else if (isNaN(year)) {
+                document.getElementById("yearerror").innerHTML = "year is not valid";
+            }
+            else {
+                document.getElementById("yearerror").innerHTML = "";
+            }
+
+        }
         function paymentvalidate()
         {
             
             cardno();
             cardname();
             cvvno();
-            
+            month();
+            year();
         }
     </script>
 </head>
@@ -139,7 +170,7 @@
                      <div class="col-md-3" style="margin-top:2%;">
                          
                          <asp:DropDownList ID="ddlmonth" runat="server" CssClass="form-control" Width="45%">
-                             <asp:ListItem Value="0">Month</asp:ListItem>
+                            <asp:ListItem Value="0">Month</asp:ListItem>
                              <asp:ListItem Value="1">01</asp:ListItem>
                              <asp:ListItem Value="2">02</asp:ListItem>
                              <asp:ListItem Value="3">03</asp:ListItem>
@@ -153,7 +184,7 @@
                              <asp:ListItem Value="11">11</asp:ListItem>
                              <asp:ListItem Value="12">12</asp:ListItem>
                          </asp:DropDownList>       
-
+                          <div id="montherror" class="errormsg"></div>
                      </div>
                      <div class="col-md-3" style="margin-top:2%; ">
                          
@@ -172,7 +203,7 @@
                              <asp:ListItem Value="11">2029</asp:ListItem>
                              <asp:ListItem Value="12">3000</asp:ListItem>
                          </asp:DropDownList>       
-
+                            <div id="yearerror" class="errormsg"></div>
                      </div>
                      <div class="col-md-6">
                          <asp:Label ID="lblcvv" runat="server" Text="Cvv"></asp:Label>
