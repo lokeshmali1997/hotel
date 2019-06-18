@@ -8,9 +8,94 @@
     <link href="mybooking.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <style>
+      .errormsg {
+         
+           
+             color:red;
+            
+
+         }
+ </style>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  
+  <script>
+      function firstname() {
+          var name = document.getElementById("txtfirstname").value;
+
+          if (name == "") {
+              document.getElementById("mynameerror").innerHTML = "Name is Empty";
+          }
+          else if (!isNaN(name)) {
+              document.getElementById("mynameerror").innerHTML = "Name is invalid";
+          }
+          else {
+              document.getElementById("mynameerror").innerHTML = "";
+              return true;
+          }
+      }
+      function lastname() {
+          var name = document.getElementById("txtlastname").value;
+
+          if (name == "") {
+              document.getElementById("mylastnameerror").innerHTML = "Name is Empty";
+          }
+          else if (!isNaN(name)) {
+              document.getElementById("mylastnameerror").innerHTML = "Name is invalid";
+          }
+          else {
+              document.getElementById("mylastnameerror").innerHTML = "";
+              return true;
+          }
+      }
+      function myemail() {
+
+          var email = document.getElementById("txtemail").value;
+          var atposition = email.indexOf("@");
+          var dotposition = email.dotposition;
+          if (email == "") {
+              document.getElementById("emailerror").innerHTML = "email is Empty";
+
+          }
+          else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length) {
+              document.getElementById("emailerror").innerHTML = "email is not correct";
+          }
+          else {
+              document.getElementById("emailerror").innerHTML = "";
+              return true;
+          }
+
+      }
+      function mynumber() {
+          var number = document.getElementById("txtphone").value;
+          if (number == "") {
+              document.getElementById("numbererror").innerHTML = " number is empty";
+          }
+          else if (number.length != 10) {
+              document.getElementById("numbererror").innerHTML = " number is wrong";
+          }
+          else if (isNaN(number)) {
+              document.getElementById("numbererror").innerHTML = " enter number value only";
+          }
+          else {
+              document.getElementById("numbererror").innerHTML = "";
+              return true;
+          }
+      }
+      function mybookingvalidate()
+      {
+          firstname();
+          lastname();
+          myemail();
+          mynumber();
+          if (firstname() && lastname() && myemail() && mynumber()) {
+              return true;
+          }
+          else {
+              return false;
+          }
+      }
+  </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -23,21 +108,25 @@
                         <div class="col-md-6">
                             <span>First Name</span>
                             <asp:TextBox ID="txtfirstname" runat="server" CssClass="form-control"></asp:TextBox>
-                        </div>
+                        <div id="mynameerror" class="errormsg"></div>
+                             </div>
                         <div class="col-md-6">
                             <span>Last Name</span>
                             <asp:TextBox ID="txtlastname" runat="server" CssClass="form-control"></asp:TextBox>
-                        </div>
+                        <div id="mylastnameerror" class="errormsg"></div>
+                             </div>
                     </div>
                     <div class="row textboxes">
                         <div class="col-md-6">
                             <span>Email Address</span>
                             <asp:TextBox ID="txtemail" runat="server" CssClass="form-control"></asp:TextBox>
-                        </div>
+                            <div id="emailerror" class="errormsg"></div>
+                             </div>
                         <div class="col-md-6">
                             <span>Phone Number</span>
                             <asp:TextBox ID="txtphone" runat="server" CssClass="form-control"></asp:TextBox>
-                        </div>
+                            <div id="numbererror" class="errormsg"></div>
+                              </div>
                     </div>
                     <div class="row textboxes">
                         <div class="col-md-6">
@@ -63,7 +152,7 @@
                     </div>
                     <div class="row textboxes">
                         <div class="col-md-12">
-                            <asp:Button ID="btnreserve" runat="server" Text="Reserve Your Room" CssClass="reserve" PostBackUrl="~/paymentpage.aspx"/>
+                            <asp:Button ID="btnreserve" runat="server" Text="Reserve Your Room" OnClientClick="mybookingvalidate()" CssClass="reserve" PostBackUrl="~/paymentpage.aspx"/>
                         </div>
                     </div>
                 </div>
