@@ -103,6 +103,7 @@
             else
             {
                 document.getElementById("nameerror").innerHTML = "";
+                return true;
             }
         }
         function email()
@@ -120,6 +121,7 @@
             }
             else {
                 document.getElementById("emailerror").innerHTML = "";
+                return true;
             }
            
         }
@@ -132,6 +134,7 @@
             }
             else {
                 document.getElementById("passerror").innerHTML = "";
+                return true;
             }
         }
         function conformpassword()
@@ -148,6 +151,7 @@
             }
             else {
                 document.getElementById("confpasserror").innerHTML = "";
+                return true;
             }
         }
         function state()
@@ -178,6 +182,7 @@
             }
             else {
                 document.getElementById("numbererror").innerHTML = "";
+                return true;
             }
         }
         function validate() {
@@ -188,7 +193,12 @@
            // state();
             password();
             conformpassword();
-            
+            if (name() && email() && number() && password() && conformpassword()) {
+                return true;
+            }
+            else {
+                return false;
+            }
           
         }
 
@@ -207,6 +217,7 @@
             }
             else {
                 document.getElementById("loginemailerror").innerHTML = "";
+                return true;
             }
            
         }
@@ -219,20 +230,26 @@
             }
             else {
                 document.getElementById("loginpasserror").innerHTML = "";
+                return true;
             }
         }
             function loginvalidate() {
           
             loginemail();
             loginpassword();
-            
+            if (loginemail() && loginpassword()) {
+                return true;
+            }
+            else {
+                return false;
+            }
         }
         
 
         </script>
 </head>
 <body>
-    <form id="form1"  onsubmit="return false;" runat="server">
+    <form id="form1"   runat="server">
     <div class="container">
      <!-- Trigger the modal with a button -->
   <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal2" >Make Your A/C &nbsp<span class="glyphicon glyphicon-chevron-down" ></span></button>
