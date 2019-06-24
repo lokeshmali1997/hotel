@@ -73,17 +73,17 @@
 
 
             if (no == "") {
-                document.getElementById("cvverror").innerHTML = " card no is empty";
+                document.getElementById("cvverror").innerHTML = " cvv no is empty";
             }
             else if (lengths!=3) {
-                document.getElementById("cvverror").innerHTML = "invalid card no";
+                document.getElementById("cvverror").innerHTML = "invalid cvv no";
             }
             else if (isNaN(no)) {
 
                 document.getElementById("cvverror").innerHTML = "enter only number";
             }
             else {
-                document.getElementById("cardnoerror").innerHTML = "";
+                document.getElementById("cvverror").innerHTML = "";
             }
         }
         function month()
